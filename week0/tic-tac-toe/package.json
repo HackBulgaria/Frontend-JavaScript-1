@@ -1,0 +1,9 @@
+{
+  "name": "tic-tac-toe",
+  "version": "0.0.0",
+  "description": "Simple tic-tac-toe game",
+  "main": "game.js",
+  "dependencies": {
+    "sync-prompt": "^0.2.2"
+  }
+}
