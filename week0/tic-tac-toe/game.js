@@ -10,8 +10,7 @@ function printBoard(board) {
   // keep in mind that this is poorly-written JavaScript code
   // we will learn not to use for loops in JavaScript
   for(i; i < n; i++) {
-    for(j; j < m; j ++) {
-      // this is string concatenation
+    for(j; j < m; j++) {
       row += board[i][j];
     }
     console.log(row);
@@ -21,20 +20,26 @@ function printBoard(board) {
 // entry point for the game
 function gameLoop() {
   var
-    board = [ ["***"],
-              ["***"],
-              ["***"] ],
+    board = [ ["*", "*", "*"],
+              ["*", "*", "*"],
+              ["*", "*", "*"] ],
     xTurn = true,
     position = null;
 
+    var player1Name, player2Name;
+
+    player1Name = prompt("Enter name for player1>");
+    player2Name = prompt("Enter name for player2>");
+
   while(true) {
+
     console.log("This is the current state of the board:");
     printBoard(board);
 
     if(xTurn) {
-      console.log("Place x below");
+      console.log("Place for " + player1Name);
     } else {
-      console.log("Place y below");
+      console.log("Place for " + player2Name);
     }
 
     // this is blocking prompt
