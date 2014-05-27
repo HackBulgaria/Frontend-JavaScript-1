@@ -98,7 +98,7 @@ We recommend the following defaults as a base:
 
 For base, we are going to use `SublimeCodeIntel` and `JSHint Gutter`
 
-If you have fresh Sublime installed, first, you need to get the `Package Control` plugin - LINK
+If you have fresh Sublime installed, first, you need to get the `Package Control` plugin - https://sublime.wbond.net/installation
 
 After this, in Sublime, press `ctrl + shift + p` and type `Install Package`
 
