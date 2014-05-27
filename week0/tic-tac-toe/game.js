@@ -3,17 +3,12 @@ var prompt = require("sync-prompt").prompt;
 
 function printBoard(board) {
   var
-    i = 0, j = 0,
-    n = board.length, m = board[0].length,
-    row = "";
-
+    i = 0,
+    n = board.length;
   // keep in mind that this is poorly-written JavaScript code
   // we will learn not to use for loops in JavaScript
   for(i; i < n; i++) {
-    for(j; j < m; j++) {
-      row += board[i][j];
-    }
-    console.log(row);
+    console.log(board[i].join(""));
   }
 }
 
@@ -43,8 +38,15 @@ function gameLoop() {
     }
 
     // this is blocking prompt
-    position = prompt("x y>");
+    position = prompt("x y>").split(" ");
     console.log(position);
+    var x = parseInt(position[0], 10);
+    var y = parseInt(position[1], 10);
+
+    var row = board[x-1];
+    row[y-1] = "X";
+    console.log(row);
+    board[x-1] = row;
 
     xTurn = !xTurn;
   }
