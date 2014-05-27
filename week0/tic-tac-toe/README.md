@@ -25,3 +25,15 @@ To implement the game, you will need basic JavaScript knowledge.
 The code that is already in the game, shows the main structures of JavaScript.
 
 You wont need anything else to finish the game.
+
+## How to start the game
+
+You will need all files from the directory:
+
+* `.jshintrc`
+* `package.json`
+* `game.js`
+
+In order to get the `sync-prompt` library, you need to run `npm install` in the tic-tac-toe directory.
+
+It may need superuser.
