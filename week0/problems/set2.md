@@ -72,7 +72,7 @@ var users = [{
 
 var result = filter(function(user) {
     return user.score > 40;
-});
+}, users);
 
 console.log(result);
 /*
