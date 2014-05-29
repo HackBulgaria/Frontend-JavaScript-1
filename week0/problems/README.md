@@ -204,3 +204,28 @@ Object.keys(courses).forEach(function(value) {
     console.log("A link for " + value + " can be found here - " + courses[value])
 });
 ```
+
+## Sortring Arrays
+
+It is a good idea to read the documentation about sort - https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+
+
+The default sort sorts the items lexicographically.
+
+
+Check this out:
+
+```javascript
+var scores = [1, 2, 10, 21];
+scores.sort(); // [1, 10, 2, 21]
+```
+
+If you want to sort numbers, you have to give a comparator function:
+
+```javascript
+var numbers = [4, 2, 5, 1, 3];
+numbers.sort(function(a, b) {
+    return a - b;
+});
+console.log(numbers);
+```
