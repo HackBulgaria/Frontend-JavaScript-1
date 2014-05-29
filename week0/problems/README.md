@@ -51,7 +51,7 @@ Variables have types but the types are hidden from us since JavaScript is a dyna
 
 We can have functions, numbers, strings, lists, objects and so on.
 
-```
+```javascript
 // numbers
 var n = 5;
 
@@ -103,7 +103,7 @@ for(var i = 0; i < arr.length; i++) {
 console.log(i);
 ```
 
-We have something called __variable hoisting__. All `var` statements are moved to the top of the enclosing function, but the value is assign later, in the original place of the `var` statement
+We have something called __variable hoisting__. All `var` statements are moved to the top of the enclosing function, but the value is assigned later, in the original place of the `var` statement
 
 The code above is translated to:
 
@@ -123,3 +123,35 @@ console.log(i);
 ### Iterating arrays and objects
 
 In JavaScript, we have a standard for-loop:
+
+```javascript
+var
+    arr = [1,2,3],
+    i = 0,
+    n = arr.length;
+
+for(i; i < n; i++) {
+    // do something with arr[i]
+}
+```
+
+But also, we have something far more powerful - a [`forEach` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) of the array object:
+
+```javascript
+var arr = [1,2,3];
+
+arr.forEach(function(value, index, arr) {
+    // do something with value
+    console.log(value);
+});
+```
+
+`forEach` takes a function (__we call this callback__) and calls the given function for every item in the array.
+
+The function is called with 3 arguments:
+
+* `value` - which is the current item in the array
+* `index` - which is the index of the current value in the array
+* `array` - the array itself.
+
+`forEach` is a method. Since everything in JavaScript is a function, we have methods for most of our types.
