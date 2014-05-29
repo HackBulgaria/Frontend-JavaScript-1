@@ -171,7 +171,7 @@ var courses = {
     "Core Java" : "https://github.com/HackBulgaria/Core-Java-1"
 };
 
-for(course in courses) {
+for(var course in courses) {
   console.log("A link for " + course + " can be found here - " + courses[course]);
 };
 ```
