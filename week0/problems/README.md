@@ -120,7 +120,7 @@ for(i = 0; i < arr.length; i++) {
 console.log(i);
 ```
 
-### Iterating arrays and objects
+### Iterating arrays
 
 In JavaScript, we have a standard for-loop:
 
@@ -155,3 +155,52 @@ The function is called with 3 arguments:
 * `array` - the array itself.
 
 `forEach` is a method. Since everything in JavaScript is a function, we have methods for most of our types.
+
+### Iterating objects
+
+Objects in JavaScript can serve as dictionaries (hash tables) where the key can be string.
+__In JavaScript, objects cannot have keys with different types than a string.__
+
+A fully functioning hash table is coming in the next version of JavaScript.
+
+To iterate an object, we can use a `for .. in` loop:
+
+```javascript
+var courses = {
+    "FrontendJavaScript" : "https://github.com/HackBulgaria/Frontend-JavaScript-1/",
+    "Core Java" : "https://github.com/HackBulgaria/Core-Java-1"
+};
+
+for(course in courses) {
+  console.log("A link for " + course + " can be found here - " + courses[course]);
+};
+```
+
+Later, we will find out that `for .. in` loop goes one step further and returns object properties that we do not want.
+
+Another way to iterate is to use the `Object.keys()` method, which returns all keys from a given object.
+
+For example:
+
+```javascript
+var courses = {
+    "FrontendJavaScript" : "https://github.com/HackBulgaria/Frontend-JavaScript-1/",
+    "Core Java" : "https://github.com/HackBulgaria/Core-Java-1"
+};
+
+console.log(Object.keys(courses)); // [ 'FrontendJavaScript', 'Core Java' ]
+```
+
+Knowing that arrays have `forEach` method, we can do the following:
+
+```javascript
+var courses = {
+    "FrontendJavaScript" : "https://github.com/HackBulgaria/Frontend-JavaScript-1/",
+    "Core Java" : "https://github.com/HackBulgaria/Core-Java-1"
+};
+
+// we can skip the index and array arguments
+Object.keys(courses).forEach(function(value) {
+    console.log("A link for " + value + " can be found here - " + courses[value])
+});
+```
