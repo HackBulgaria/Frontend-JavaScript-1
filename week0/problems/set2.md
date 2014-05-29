@@ -80,3 +80,21 @@ console.log(result);
   { name: 'Ivan', score: 67 } ]
 */
 ```
+
+## String format
+
+Implement a function, called `format(str, dict)` which formats the given string, by replacing the placeholders with values from `dict`.
+
+For example:
+
+```javascript
+var formatted = format("{lang} is a very weird {thing}!", {
+  "lang" : "JavaScript",
+  "thing" : "language"
+});
+
+console.log(formatted); // JavaScript is a very weird language!
+```
+
+The placeholders should have name, which serves as a key in `dict`.
+The placeholder format is: `{name}`
