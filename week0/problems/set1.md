@@ -35,8 +35,7 @@ If a negative number is given, the function should work as if it was positive.
 For example, if n is `1325132435356`, the digit's sum is `43`.
 If n is -10, the sum is 1 + 0 = 1
 
-Keep in mind that in Python, there is a special operator for integer division:
-For integer division in JavaScript, check this -
+For integer division in JavaScript, check this - http://stackoverflow.com/questions/4228356/integer-division-in-javascript
 
 ### Signature
 
