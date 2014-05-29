@@ -32,3 +32,51 @@ forEach(function(value, key) {
 ```
 
 Use `Array.isArray()` to check if a given argument is an array.
+
+
+## Let's map
+
+Implement a basic map function with the following signature: `map(f, arr)`
+
+This funcitons maps `f` on each element of `arr`, creating an entirely new array.
+
+For example:
+
+```javascript
+var result = map(function(x) {
+    return x * x;
+}, [1,2,3]);
+
+console.log(result); // [1, 4, 9]
+```
+
+## Let's filter
+
+Implement a basic filter function with the following signature: `filter(pred, arr)` where `pred` is a function, that returns true or false (A predicate)
+
+For example:
+
+```javascript
+var users = [{
+    "name" : "Rado",
+    "score" : 50
+}, {
+    "name" : "Ivan",
+    "score" : 67
+}, {
+    "name" : "Vlado",
+    "score" : 30
+}];
+
+// filter all users with score bigger than 40
+
+var result = filter(function(user) {
+    return user.score > 40;
+});
+
+console.log(result);
+/*
+[ { name: 'Rado', score: 50 },
+  { name: 'Ivan', score: 67 } ]
+*/
+```
