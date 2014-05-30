@@ -33,6 +33,23 @@ forEach(function(value, key) {
 
 Use `Array.isArray()` to check if a given argument is an array.
 
+## String format
+
+Implement a function, called `format(str, dict)` which formats the given string, by replacing the placeholders with values from `dict`.
+
+For example:
+
+```javascript
+var formatted = format("{lang} is a very weird {thing}!", {
+  "lang" : "JavaScript",
+  "thing" : "language"
+});
+
+console.log(formatted); // JavaScript is a very weird language!
+```
+
+The placeholders should have name, which serves as a key in `dict`.
+The placeholder format is: `{name}`
 
 ## Let's map
 
@@ -81,20 +98,24 @@ console.log(result);
 */
 ```
 
-## String format
+## Reduce arrays
 
-Implement a function, called `format(str, dict)` which formats the given string, by replacing the placeholders with values from `dict`.
+Implement a reducing function, that takes a binary operation (a function of two arguments), an array and a starting value.
 
-For example:
+The function should return a single value, that is obtained by accumulating the result of the operation for every element in the array.
+
+For example, lets have the following array: `[a1, a2, a3, a4, a5]` and a binary operation: `oper` and a starting value: `start`
+
+If we reduce the given list with the given binary operation, we will obtain the following result: `start oper a1 oper a2 oper a3 oper a4 oper a5`
+
+If oper is the plus sign (`+`), we will have : `start + a1 + a2 + a3 + a4 + a5`, which is the sum of all elements in the list.
+
+This is an example of the `reduce` method of lists in JavaScript:
 
 ```javascript
-var formatted = format("{lang} is a very weird {thing}!", {
-  "lang" : "JavaScript",
-  "thing" : "language"
-});
-
-console.log(formatted); // JavaScript is a very weird language!
+var sum = function(arr) {
+    return arr.reduce(function(acc, next) {
+        return acc + next;
+    }, 0);
+};
 ```
-
-The placeholders should have name, which serves as a key in `dict`.
-The placeholder format is: `{name}`
