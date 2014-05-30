@@ -119,3 +119,27 @@ var sum = function(arr) {
     }, 0);
 };
 ```
+
+## Any and All
+
+Implement to higher-order functions, called `any` and `all`.
+
+Both functions have the following signature:
+
+```javascript
+var any = function(pred, arr) {
+
+};
+
+var all = function(pred, arr) {
+
+};
+```
+
+* `any` returns true if any of the elements in `arr` returns true if called with the predicate `pred`. False otherwise.
+* `all` returns true if all of the elements in `arr` returns true if called with the predicate `pred`. False otherwise.
+
+In JavaScript, those functions are implemented as array methods:
+
+* `any` is `Array.prototype.some` - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
+* `all` is `Array.prototype.every` - https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/every
