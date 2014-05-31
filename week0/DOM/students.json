@@ -1,5 +1,5 @@
 { 
-  "menu": [
+  "students": [
     {
       "name" : "Daniel Taskoff",
       "course" : "Frontend JavaScript"
