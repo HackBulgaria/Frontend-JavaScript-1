@@ -11,3 +11,7 @@ Here are few very useful tools for Bootstrap:
 * [Bootstrap button generator](http://www.plugolabs.com/twitter-bootstrap-button-generator/)
 * [Bootstrap form builder](http://minikomi.github.io/Bootstrap-Form-Builder/)
 * [Bootstrap layout builder](http://www.layoutit.com/)
+
+### Videos ot watch
+
+* Here is a good introduction to HTML 5 - https://www.youtube.com/watch?v=siOHh0uzcuY - covering the stuff we are going to use.
