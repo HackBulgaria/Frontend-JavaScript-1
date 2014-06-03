@@ -218,8 +218,6 @@ var only = function(type, arr) {
 
 The function returns true, if all elements in `arr` are from the given `type` (which is a string - `'number'`, `'string'`, etc.)
 
-Implement the function using `all`, `always` and `map`.
-
 For example:
 
 ```javascript
