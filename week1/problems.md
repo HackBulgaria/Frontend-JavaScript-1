@@ -463,7 +463,7 @@ For example:
 
 ```javascript
 var items = [{ "label" : "Item 1"},
-             { "label" : "Item 2", children : [
+             { "label" : "Item 2", "children" : [
                 {
                     "label" : "Level 2 of Item 2"
                 },
