@@ -413,3 +413,77 @@ Will output:
   f: 1,
   d: 1 }
 ```
+
+## Unordered lists and ordered lists
+
+Implement two functions - `ol` and `ul` that takes a list of `items`:
+
+```javascript
+var items = [{ "label" : "Item 1"}, { "label" : "Item 2"}, ...]
+```
+
+`ul` and `ol` have the following signature:
+
+```javascript
+var ul = function(items) {
+
+};
+
+var ol = function(items) {
+
+};
+```
+
+Both functions output an HTML string - ordered or unordered lists, constructed from `items` where the text in each `<li>` is the value of each `label` key.
+
+
+For example:
+
+```javascript
+var items = [{ "label" : "Item 1"}, { "label" : "Item 2"}]
+var htmlOl = ol(items);
+```
+
+`htmlOl` will be:
+
+```html
+<ol>
+<li>Item 1</li>
+<li>Item 2</li>
+</ol>
+```
+
+## Nested lists
+
+Alter the `ol` and `ul` functions, so they can output [nested lists](http://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists2).
+
+`items` will be altered, so each object can have a `children` key.
+For example:
+
+
+```javascript
+var items = [{ "label" : "Item 1"},
+             { "label" : "Item 2", children : [
+                {
+                    "label" : "Level 2 of Item 2"
+                },
+                {
+                    "label" : "Another level 2"
+                }
+             ]}];
+
+```
+
+`ol(items)` will output:
+
+```html
+<ol>
+    <li>Item 1</li>
+    <li>Item 2
+        <ol>
+          <li>Level 2 of Item 2</li>
+          <li>Another level 2</li>
+        </ol>
+    </li>
+</ol>
+```
