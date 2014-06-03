@@ -75,7 +75,7 @@ var contains = function(element, arr) {
 
 The function returns `true` if `element` is present in `arr`. Otherwise - `false`
 
-## Contains then all? Find a list in a list
+## Contains them all? Find a list in a list
 
 Using only higher-order functions and variables, implement `contains` with the following signature:
 
