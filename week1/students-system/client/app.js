@@ -10,4 +10,13 @@ $(document).ready(function() {
       alert("Students came. Open your console and remove this alert!");
       //start here
   });
+
+  $("#group-btn").on("click", function() {
+    alert("What are you looking at? Go implement that logic.");
+  });
+
+  $("#search-btn").on("click", function() {
+    var searched = $("#search-box").val();
+    alert("You searched for " + searched);
+  });
 });
