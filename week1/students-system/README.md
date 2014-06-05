@@ -147,4 +147,4 @@ service apache2 restart
 
 If everything is OK, open your client via `http://localhost/path-to-your-client` and you should see this:
 
-!()[readme-images/default_view.ong]
+![](readme-images/default_view.ong)
