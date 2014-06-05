@@ -190,7 +190,7 @@ When the user clicks the button, do the following:
 
 Consider this:
 
-![](https://github.com/HackBulgaria/Frontend-JavaScript-1/blob/master/week1/students-system/readme-images/grouped.png)
+![](https://raw.githubusercontent.com/HackBulgaria/Frontend-JavaScript-1/master/week1/students-system/readme-images/grouped.png)
 
 ### Searching by name
 
@@ -206,4 +206,4 @@ For making the row green, check this - http://getbootstrap.com/2.3.2/base-css.ht
 
 An example view of the search:
 
-![](https://github.com/HackBulgaria/Frontend-JavaScript-1/blob/master/week1/students-system/readme-images/search.png)
+![](https://raw.githubusercontent.com/HackBulgaria/Frontend-JavaScript-1/master/week1/students-system/readme-images/search.png)
