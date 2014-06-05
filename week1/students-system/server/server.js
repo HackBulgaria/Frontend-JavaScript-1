@@ -12,18 +12,23 @@ app.all('*', function(req, res, next) {
 });
 
 var students = [{
+  "id" : 1,
   "name" : "Daniel Taskoff",
   "course" : "Frontend JavaScript"
 }, {
+  "id" : 2,
   "name" : "Elena Jeleva",
   "course" : "Programming 101"
 }, {
+  "id" : 3,
   "name" : "Luboslava Dimitrova",
   "course" : "Frontend JavaScript"
 }, {
+  "id": 4,
   "name" : "Anton Antonov",
   "course" : "Core Java"
 }, {
+  "id" : 5,
   "name" : "Nikola Dichev",
   "course" : "Core Java"
 }];
