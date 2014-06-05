@@ -147,4 +147,4 @@ service apache2 restart
 
 If everything is OK, open your client via `http://localhost/path-to-your-client` and you should see this:
 
-![](readme-images/default_view.ong)
+![](https://raw.githubusercontent.com/HackBulgaria/Frontend-JavaScript-1/master/week1/students-system/readme-images/default_view.png)
