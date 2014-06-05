@@ -148,3 +148,62 @@ service apache2 restart
 If everything is OK, open your client via `http://localhost/path-to-your-client` and you should see this:
 
 ![](https://raw.githubusercontent.com/HackBulgaria/Frontend-JavaScript-1/master/week1/students-system/readme-images/default_view.png)
+
+## The task
+
+Examine `index.html` and `app.js`
+
+Your job is to finish the following features:
+
+### Rendering table with the data from the server
+
+This table is hardcoded in the HTML for an example.
+
+Your first job is to take the `students` array and render the table using that data!
+
+Each student is an object with 3 attributes:
+
+```javascript
+{
+    "id" : 1,
+    "name" : "Student",
+    "course" "Frontend JavaScript"
+}
+```
+
+Render a table with 3 columns, corresponding to the attributes of the object.
+
+### Group by courses button - make it work!
+
+After you have successfuly rendered the table from the data, examine `app.js` and finish the following code:
+
+```javascript
+$("#group-btn").on("click", function() {
+  alert("What are you looking at? Go implement that logic.");
+});
+```
+
+When the user clicks the button, do the following:
+
+* Group the students by the course they are attending!
+* If we have `n` different groups, render `n` different tables for each group
+
+Consider this:
+
+![](https://github.com/HackBulgaria/Frontend-JavaScript-1/blob/master/week1/students-system/readme-images/grouped.png)
+
+### Searching by name
+
+The last thing we are going to do is to implement the search logic.
+
+When the users clicks the search button, do the following:
+
+* Take the input (see `app.js`) and search all students if the given name is matching or partially matching any of your students.
+* If the name is matching, find the user in the table and make the row green, indicating that we have found our user
+* If we are searching in grouped mode, with more than 1 table, do the same for each table :)
+
+For making the row green, check this - http://getbootstrap.com/2.3.2/base-css.html#tables
+
+An example view of the search:
+
+![](https://github.com/HackBulgaria/Frontend-JavaScript-1/blob/master/week1/students-system/readme-images/search.png)
