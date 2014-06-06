@@ -15,3 +15,12 @@ Here are few very useful tools for Bootstrap:
 ### Videos ot watch
 
 * Here is a good introduction to HTML 5 - https://www.youtube.com/watch?v=siOHh0uzcuY - covering the stuff we are going to use.
+
+## JavaScript The Good Parts
+
+* The difference between `var f = function() {}` and `function f() {}` is explained very well here - http://stackoverflow.com/questions/336859/var-functionname-function-vs-function-functionname
+
+## JavaScript, DOM and Frontend Programming
+
+* A very good reference about the DOM can be found here - https://developer.mozilla.org/en/docs/DOM
+* A short read about JavaScript and the DOM API - https://developer.mozilla.org/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
