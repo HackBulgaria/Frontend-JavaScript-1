@@ -24,3 +24,9 @@ Here are few very useful tools for Bootstrap:
 
 * A very good reference about the DOM can be found here - https://developer.mozilla.org/en/docs/DOM
 * A short read about JavaScript and the DOM API - https://developer.mozilla.org/en-US/docs/Web/JavaScript/JavaScript_technologies_overview
+
+We are going to use jQuery for our DOM manipulations.
+
+There is no better way to start with jQuery than this - http://try.jquery.com/
+
+The first topic is fast so try to cover the 12 videos from "Introduction to jQuery"
