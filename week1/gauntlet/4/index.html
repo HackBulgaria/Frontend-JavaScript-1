@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chaining dropdowns</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p class="lead">Pick a course to list all students. Pick a student, to see his GitHub account.</p>
+        <div class="row">
+            <div class="col-xs-12">
+                <form role="form">
+                    <div class="form-group">
+                    <label for="course-pick" class="control-label">Course:</label>
+                    <select name = "course-pick" class="form-control">
+                            <option>Frontend JavaScript</option>
+                            <option>Core Java</option>
+                            <option>Programming 101</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Student:</label>
+                        <select class="form-control">
+                            <option>Should be populated from the server</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h2>GitHub for #StudentName# is #GitHubUrl#</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
