@@ -1,0 +1,13 @@
+'use strict';
+
+
+var forEach = require('./forEach').forEach;
+
+exports.testForEach = function (test) {
+    var result = [];
+    forEach(function (x) {
+        result.push(x * x);
+    }, [1, 2, 3, 4, 5]);
+    test.deepEqual([1, 4, 9, 16, 25], result);
+    test.done();
+};
