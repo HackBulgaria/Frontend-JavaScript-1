@@ -1,0 +1,19 @@
+{
+  "name": "students-system-server",
+  "version": "0.0.0",
+  "description": "A simple memory-based API to return a list of students",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Frontend",
+    "JavaScript",
+    "Course"
+  ],
+  "author": "RadoRado",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.4.1"
+  }
+}
