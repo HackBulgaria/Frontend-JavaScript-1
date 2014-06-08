@@ -11,3 +11,10 @@ exports.testForEach = function (test) {
     test.deepEqual([1, 4, 9, 16, 25], result);
     test.done();
 };
+
+exports.testForEachNonArray = function (test) {
+    test.throws(function f () {
+        forEach(function (x) { return x; }, 1);
+    });
+    test.done();
+};
