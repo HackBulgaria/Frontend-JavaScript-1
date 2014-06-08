@@ -1,0 +1,22 @@
+{
+  "name": "gauntlet-1",
+  "version": "0.0.0",
+  "homepage": "https://github.com/HackBulgaria/Frontend-JavaScript-1",
+  "authors": [
+    "RadoRado"
+  ],
+  "description": "The first task in the jQuery gauntlet of Hack Bulgaria's Frontend JavaScript course",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
