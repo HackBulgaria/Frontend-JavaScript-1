@@ -7,3 +7,5 @@ var listToNumber = function (list) {
 
 console.log('-, 0, 3, 5, 1 to number is ' +
     listToNumber(['-', 0, 3, 5, 1]));
+
+exports.listToNumber = listToNumber;

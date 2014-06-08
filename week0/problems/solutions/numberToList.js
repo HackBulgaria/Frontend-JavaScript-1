@@ -7,3 +7,5 @@ var numberToList = function (n) {
 
 console.log(numberToList(192834) +
     ' is 192834 to list');
+
+exports.numberToList = numberToList;

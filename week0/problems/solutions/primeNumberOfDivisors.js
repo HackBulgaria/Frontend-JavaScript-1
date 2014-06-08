@@ -32,3 +32,5 @@ var primeNumberOfDivisors = function (number) {
 
 console.log('10 has prime number of divisors? ' + primeNumberOfDivisors(10));
 console.log('101 has prime number of divisors? ' + primeNumberOfDivisors(101));
+
+exports.primeNumberOfDivisors = primeNumberOfDivisors;

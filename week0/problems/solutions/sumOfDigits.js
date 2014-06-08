@@ -16,3 +16,5 @@ var sumOfDigits = function (number) {
 console.log('sum of digits of 1234 is: ' + sumOfDigits(1234));
 console.log('sum of digits of -20794 is: ' + sumOfDigits(-20794));
 console.log('sum of digits of 42.42 is: ' + sumOfDigits(42.42));
+
+exports.sumOfDigits = sumOfDigits;

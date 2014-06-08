@@ -14,3 +14,5 @@ console.log('is 8, 5, 3, 2, 1 decreasing? ' +
     isDecreasing([8, 5, 3, 2, 1]));
 console.log('is 1, 2, 43, 5, 8 decreasing? ' +
     isDecreasing([1, 2, 43, 5, 8]));
+
+exports.isDecreasing = isDecreasing;

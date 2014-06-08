@@ -56,3 +56,5 @@ console.log('the factorization of 99 is ' +
     displayFactorization(primeFactorization(99)));
 console.log('the factorization of 12345678 is ' +
     displayFactorization(primeFactorization(12345678)));
+
+exports.primeFactorization = primeFactorization;

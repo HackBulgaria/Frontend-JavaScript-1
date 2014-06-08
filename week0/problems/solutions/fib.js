@@ -16,3 +16,5 @@ var fib = function (n) {
 
 console.log('the 10th fibonacci number is: ' + fib(10));
 console.log('the 50th fibonacci number is: ' + fib(50));
+
+exports.fib = fib;

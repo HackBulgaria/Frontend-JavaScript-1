@@ -12,3 +12,5 @@ console.log('haystack has ' +
 console.log('needle has ' +
     countSubstrings('needle', 'e') +
     ' es in it');
+
+exports.countSubstrings = countSubstrings;

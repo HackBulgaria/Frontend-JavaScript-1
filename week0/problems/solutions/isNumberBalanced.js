@@ -29,3 +29,5 @@ var isNumberBalanced = function (number) {
 
 console.log('is 123 balanced? ' + isNumberBalanced(123));
 console.log('is 123231 balanced? ' + isNumberBalanced(123231));
+
+exports.isNumberBalanced = isNumberBalanced;

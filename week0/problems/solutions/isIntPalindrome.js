@@ -13,3 +13,5 @@ var isIntPalindrome = function (number) {
 
 console.log('123454321 is a palindrome? ' + isIntPalindrome(123454321));
 console.log('12345 is a palindrome? ' + isIntPalindrome(12345));
+
+exports.isIntPalindrome = isIntPalindrome;

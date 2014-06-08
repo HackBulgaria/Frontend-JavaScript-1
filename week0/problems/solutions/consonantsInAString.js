@@ -11,3 +11,5 @@ var consonantsInAString = function (str) {
 console.log('Theistareykjarbunga has ' +
     consonantsInAString('Theistareykjarbunga') +
     ' vowels in it');
+
+exports.consonantsInAString = consonantsInAString;

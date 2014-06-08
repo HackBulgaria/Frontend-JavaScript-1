@@ -24,3 +24,5 @@ var sumOfDivisors = function (number) {
 };
 
 console.log('sum of divisors of 10 is: ' + sumOfDivisors(10));
+
+exports.sumOfDivisors = sumOfDivisors;

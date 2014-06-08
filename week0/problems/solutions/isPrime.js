@@ -13,3 +13,5 @@ var isPrime = function (number) {
 
 console.log('101 is a prime? ' + isPrime(101));
 console.log('1 is a prime? ' + isPrime(1));
+
+exports.isPrime = isPrime;
