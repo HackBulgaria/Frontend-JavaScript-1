@@ -1,1 +1,5 @@
-console.log("I am a sad and empty app.js :(");
+$(document).ready(function() {
+  'use strict';
+
+  alert('Hello, World!');
+});
