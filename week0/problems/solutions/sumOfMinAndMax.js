@@ -1,3 +1,8 @@
+/*
+    Solution by Daniel Taskoff
+    @github: https://github.com/dtaskoff/
+*/
+
 'use strict';
 
 // O(n)
