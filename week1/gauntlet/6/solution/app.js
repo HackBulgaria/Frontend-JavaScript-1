@@ -1,3 +1,7 @@
+/*
+* Solution by Deyan Yanakiev
+* GitHub - https://github.com/lostm1nd
+*/
 $(document).ready(function() {
 	'use strict';
 
