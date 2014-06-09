@@ -1,10 +1,15 @@
-// map, filter, reduce, any, all
+/*
+    Solution by Daniel Taskoff
+    @github: https://github.com/dtaskoff/
+*/
+
 'use strict';
 
 
 var map = function (func, arr) {
     var result = [],
-        n;
+        i = 0,
+        n = 0;
     if (!Array.isArray(arr)) {
         throw {
             name: 'TypeError',
@@ -12,8 +17,7 @@ var map = function (func, arr) {
         };
     }
     n = arr.length;
-
-    for (var i = 0; i < n; i += 1) {
+    for (i = 0; i < n; i += 1) {
         result.push(func(arr[i], i, arr));
     }
     return result;
@@ -21,7 +25,8 @@ var map = function (func, arr) {
 
 var filter = function (pred, arr) {
     var result = [],
-        n;
+        i = 0,
+        n = 0;
     if (!Array.isArray(arr)) {
         throw {
             name: 'TypeError',
@@ -29,8 +34,7 @@ var filter = function (pred, arr) {
         };
     }
     n = arr.length;
-
-    for (var i = 0; i < n; i += 1) {
+    for (i = 0; i < n; i += 1) {
         if (pred(arr[i])) {
             result.push(arr[i]);
         }
@@ -40,7 +44,8 @@ var filter = function (pred, arr) {
 
 var reduce = function (func, arr, start) {
     var result = start || 0,
-        n;
+        i = 0,
+        n = 0;
     if (!Array.isArray(arr)) {
         throw {
             name: 'TypeError',
@@ -48,7 +53,7 @@ var reduce = function (func, arr, start) {
         };
     }
     n = arr.length;
-    for (var i = 0; i < n; i += 1) {
+    for (i = 0; i < n; i += 1) {
         result = func(result, arr[i]);
     }
     return result;
@@ -56,7 +61,8 @@ var reduce = function (func, arr, start) {
 
 var any = function (pred, arr) {
     var result = false,
-        n;
+        i = 0,
+        n = 0;
     if (!Array.isArray(arr)) {
         throw {
             name: 'TypeError',
@@ -64,7 +70,7 @@ var any = function (pred, arr) {
         };
     }
     n = arr.length;
-    for (var i = 0; i < n && !result; i += 1) {
+    for (i = 0; i < n && !result; i += 1) {
         result = pred(arr[i]);
     }
     return result;
@@ -72,7 +78,8 @@ var any = function (pred, arr) {
 
 var all = function (pred, arr) {
     var result = true,
-        n;
+        i = 0,
+        n = 0;
     if (!Array.isArray(arr)) {
         throw {
             name: 'TypeError',
@@ -80,7 +87,7 @@ var all = function (pred, arr) {
         };
     }
     n = arr.length;
-    for (var i = 0; i < n && result; i += 1) {
+    for (i = 0; i < n && result; i += 1) {
         result = pred(arr[i]);
     }
     return result;
