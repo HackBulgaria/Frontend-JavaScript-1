@@ -1,9 +1,16 @@
+/*
+    Solution by Daniel Taskoff
+    @github: https://github.com/dtaskoff/
+*/
+
 'use strict';
 
 
 var isPrime = function (number) {
+    var i = 0,
+        n = Math.sqrt(number);
     // for is the best in this case
-    for (var i = 2; i <= Math.sqrt(number); i += 1) {
+    for (i = 2; i <= n; i += 1) {
         if (Math.floor(number % i) === 0) {
             return false;
         }
