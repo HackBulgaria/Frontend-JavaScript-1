@@ -1,10 +1,15 @@
+/*
+    Solution by Daniel Taskoff
+    @github: https://github.com/dtaskoff/
+*/
+
 'use strict';
 
 
 var sumOfDigits = function (number) {
     var sum = 0;
     // counts only digits before the floating point
-    number = Math.abs(number);
+    number = Math.floor(Math.abs(number));
 
     while (number > 0) {
         sum += parseInt(number % 10, 10);
