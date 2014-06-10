@@ -6,7 +6,7 @@ Create a class `Pair`, which takes two arguments of variable type - `left` and `
 
 The class should have the following __prototype__ methods:
 
-* `Pair.prototype.equals(pair)` - the method takes another `Pair` and returns true if they both `left` and `right` of both pairs are strictly equal
+* `Pair.prototype.equals(pair)` - the method takes another `Pair` and returns true if both `left` and `right` of both pairs are strictly equal
 * `Pair.prototype.toString()` - returns the pair in the following string format - `({left}, {right})` where `{left}` and `{right}` are replaced by the given values.
 * `Pair.prototype.toList()` - returns a list of `[left, right]`
 * `Pair.prototype.combine(f)` - `f` is a function of two arguments (`left` and `right`) - combine returns the generated value of the passed function `f`
@@ -21,6 +21,43 @@ p.combine(function(left, right) {
 }); // 10
 ```
 
+## String prototype functions
+
+Extend `String.prototype` with the following methods:
+
+* `String.prototype.capitalize()` - returns the String in capital letters
+
+For example:
+
+```javascript
+"javascript".capitalize(); // "JAVASCRIPT"
+```
+
+* `String.prototype.dasharize()` - returns a new string, where every `"_"` is replaced by a dash - `"-"`
+
+For example:
+
+```javascript
+'border_bottom_width'.dasherize(); // -> 'border-bottom-width'
+```
+
+* `String.prototype.times(amount)` - returns the string, repeated `amount` times with one space between each repetition
+
+For example:
+
+```javascript
+"bobi".times(5); // "bobi bobi bobi bobi bobi"
+``` 
+
+* `String.prototype.blank()` - checks if the string is blank - either it is empty string ot it is containing only whitespace
+
+For example:
+
+```javascript
+"  ".blank(); // true
+"".blank() ; // true
+" a".blank(); // false
+```
 ## A point in the sky.
 
 Create a class `Point`, which takes two arguments - `x` and `y`, which are numbers.
