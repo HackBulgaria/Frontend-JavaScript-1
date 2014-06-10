@@ -64,12 +64,15 @@ Create a class `Point`, which takes two arguments - `x` and `y`, which are numbe
 
 __Once created, `x` and `y` should be private!__ To get their value, use a getter method.
 
-Our class should have the following prototype methods:
+Our class should have the following consturctor setters:
 
-* `Point.prototype.xInc` - increases the `x` value by 1
-* `Point.prototype.xDec` - decreases the `x` valye by 1
-* `Point.prototype.yInc` - increases the `y` value by 1
-* `Point.prototype.yDec` - decreases the `y` value by 1
+* `xInc()` - increases the `x` value by 1
+* `xDec()` - decreases the `x` valye by 1
+* `yInc()` - increases the `y` value by 1
+* `yDec()` - decreases the `y` value by 1
+
+And the following prorotype methods:
+
 * `Point.prototype.equals = function(point) { ... }` - takes another `Point` and returns true if both `x` and `y` of both points are equal
 * `Point.prototype.toString` - returns the string representation of the point - `Point @ {x}, {y}`
 
