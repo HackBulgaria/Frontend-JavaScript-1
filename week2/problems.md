@@ -154,3 +154,5 @@ For example, you can add a button, called `Start`, which triggers the process:
 * The new order goes to a queue, waiting to be executed.
 * When the `PizzaOrder` is started and finished, accumulate the cost from it
 * Run this forever :)
+
+You can use `setTimeout` method - https://developer.mozilla.org/en/docs/Web/API/window.setTimeout
