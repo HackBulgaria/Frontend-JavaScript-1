@@ -80,7 +80,7 @@ And the following prorotype methods:
 
 Create a class, called `Robot`, which takes one argument for constructor - a starting `Point`
 
-`startPont` should be private.
+`startPoint` should be private.
 
 We should be able to move the Robot around with the following methods:
 
