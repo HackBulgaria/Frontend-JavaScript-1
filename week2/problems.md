@@ -21,7 +21,9 @@ p.combine(function(left, right) {
 }); // 10
 ```
 
-## String prototype functions
+## String, Array, Number prototype functions
+
+### String Prototype
 
 Extend `String.prototype` with the following methods:
 
@@ -58,6 +60,39 @@ For example:
 "".blank() ; // true
 " a".blank(); // false
 ```
+
+### Array prototype
+
+Extend `Array.prototype` with the following methods:
+
+* `Array.prototype.first` - returns the first element from the array of throws an exception
+* `Array.prorotype.range = function(from, to) { ... }` - returns a new array with the numbers from `from` to `to`
+
+For example:
+
+```javascript
+[].range(1,10); // [1,2,3,4,5,6,7,8,9,10]
+```
+
+* `Array.prototype.sum` - returns the sum of all elements of the array. We rely on that the array is only of numbers
+* `Array.prototype.average` - returns the average value of all elements in the array. Again, we rely on the fact that all elements are numbers
+
+### Number prototype
+
+Extend `Number.prototype` with the following method:
+
+* `Number.prototype.times = function(action) { ... }` - executes the given `action`, number times
+
+For example:
+
+```javascript
+(5).times(function() {
+  console.log("OMG!");
+});
+
+// this logs "OMG!" 5 times
+```
+
 ## A point in the sky.
 
 Create a class `Point`, which takes two arguments - `x` and `y`, which are numbers.
@@ -123,10 +158,10 @@ Each `PizzaOrder` should have its own unique id! This is how we identify the dif
 
 The unique id of `PizzaOrder` should be fetched by a `getId()` method.
 
-`PizzaOrder` should have the following Prototype methods:
+`PizzaOrder` should have the following methods:
 
-* `PizzaOrder.prototype.start` - starts making the `Pizza`. `timeToMake` is important here ;)
-* `PizzaOrder.prototype.ready = function(callback) { ... }` - takes a `callback` function, which is fired when the Pizza is ready - this when `timeToMake` time passes. The callback should be fired with the `Pizza` instance as an argument, followed by the `PizzaOrder` instance!
+* `start` - starts making the `Pizza`. `timeToMake` is important here ;)
+* `ready = function(callback) { ... }` - takes a `callback` function, which is fired when the Pizza is ready - this when `timeToMake` time passes. The callback should be fired with the `Pizza` instance as an argument, followed by the `PizzaOrder` instance!
 
 For example:
 
