@@ -80,13 +80,15 @@ And the following prorotype methods:
 
 Create a class, called `Robot`, which takes one argument for constructor - a starting `Point`
 
+`startPont` should be private.
+
 We should be able to move the Robot around with the following methods:
 
-* `Robot.prototype.moveLeft = function(amount) { ... }`
-* `Robot.prototype.moveRight = function(amount) { ... }`
-* `Robot.prototype.moveUp = function(amount) { ... }`
-* `Robot.prototype.moveDown = function(amount) { ... }`
-* `Robot.prototype.getPoistion` - returns a point of the current position of the Robot.
+* `this.moveLeft = function(amount) { ... }`
+* `this.moveRight = function(amount) { ... }`
+* `this.moveUp = function(amount) { ... }`
+* `this.moveDown = function(amount) { ... }`
+* `this.getPoistion` - returns a point of the current position of the Robot.
 
 Everywhere, `amount` is an integer.
 
