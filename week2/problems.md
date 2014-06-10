@@ -6,10 +6,10 @@ Create a class `Pair`, which takes two arguments of variable type - `left` and `
 
 The class should have the following __prototype__ methods:
 
-* `Pair.prototype.equals(pair)` - the method takes another `Pair` and returns true if both `left` and `right` of both pairs are strictly equal
-* `Pair.prototype.toString()` - returns the pair in the following string format - `({left}, {right})` where `{left}` and `{right}` are replaced by the given values.
-* `Pair.prototype.toList()` - returns a list of `[left, right]`
-* `Pair.prototype.combine(f)` - `f` is a function of two arguments (`left` and `right`) - combine returns the generated value of the passed function `f`
+* `Pair.prototype.equals = function(pair) {...}` - the method takes another `Pair` and returns true if both `left` and `right` of both pairs are strictly equal
+* `Pair.prototype.toString` - returns the pair in the following string format - `({left}, {right})` where `{left}` and `{right}` are replaced by the given values.
+* `Pair.prototype.toList` - returns a list of `[left, right]`
+* `Pair.prototype.combine = function(f) {...}` - `f` is a function of two arguments (`left` and `right`) - combine returns the generated value of the passed function `f`
 
 Few examples:
 
@@ -25,7 +25,7 @@ p.combine(function(left, right) {
 
 Extend `String.prototype` with the following methods:
 
-* `String.prototype.capitalize()` - returns the String in capital letters
+* `String.prototype.capitalize` - returns the String in capital letters
 
 For example:
 
@@ -33,7 +33,7 @@ For example:
 "javascript".capitalize(); // "JAVASCRIPT"
 ```
 
-* `String.prototype.dasharize()` - returns a new string, where every `"_"` is replaced by a dash - `"-"`
+* `String.prototype.dasharize` - returns a new string, where every `"_"` is replaced by a dash - `"-"`
 
 For example:
 
@@ -41,7 +41,7 @@ For example:
 'border_bottom_width'.dasherize(); // -> 'border-bottom-width'
 ```
 
-* `String.prototype.times(amount)` - returns the string, repeated `amount` times with one space between each repetition
+* `String.prototype.times = function(amount)` - returns the string, repeated `amount` times with one space between each repetition
 
 For example:
 
@@ -49,7 +49,7 @@ For example:
 "bobi".times(5); // "bobi bobi bobi bobi bobi"
 ``` 
 
-* `String.prototype.blank()` - checks if the string is blank - either it is empty string ot it is containing only whitespace
+* `String.prototype.blank` - checks if the string is blank - either it is empty string ot it is containing only whitespace
 
 For example:
 
@@ -66,12 +66,12 @@ __Once created, `x` and `y` should be private!__ To get their value, use a gette
 
 Our class should have the following prototype methods:
 
-* `Point.prototype.xInc()` - increases the `x` value by 1
-* `Point.prototype.xDec()` - decreases the `x` valye by 1
-* `Point.prototype.yInc()` - increases the `y` value by 1
-* `Point.prototype.yDec()` - decreases the `y` value by 1
-* `Point.prototype.equals(point)` - takes another `Point` and returns true if both `x` and `y` of both points are equal
-* `Point.prototype.toString()` - returns the string representation of the point - `Point @ {x}, {y}`
+* `Point.prototype.xInc` - increases the `x` value by 1
+* `Point.prototype.xDec` - decreases the `x` valye by 1
+* `Point.prototype.yInc` - increases the `y` value by 1
+* `Point.prototype.yDec` - decreases the `y` value by 1
+* `Point.prototype.equals = function(point) { ... }` - takes another `Point` and returns true if both `x` and `y` of both points are equal
+* `Point.prototype.toString` - returns the string representation of the point - `Point @ {x}, {y}`
 
 ## A Robot.
 
@@ -79,11 +79,11 @@ Create a class, called `Robot`, which takes one argument for constructor - a sta
 
 We should be able to move the Robot around with the following methods:
 
-* `Robot.prototype.moveLeft(amount)`
-* `Robot.prototype.moveRight(amount)`
-* `Robot.prototype.moveUp(amount)`
-* `Robot.prototype.moveDown(amount)`
-* `Robot.prototype.getPoistion()` - returns a point of the current position of the Robot.
+* `Robot.prototype.moveLeft = function(amount) { ... }`
+* `Robot.prototype.moveRight = function(amount) { ... }`
+* `Robot.prototype.moveUp = function(amount) { ... }`
+* `Robot.prototype.moveDown = function(amount) { ... }`
+* `Robot.prototype.getPoistion` - returns a point of the current position of the Robot.
 
 Everywhere, `amount` is an integer.
 
@@ -120,8 +120,8 @@ The unique id of `PizzaOrder` should be fetched by a `getId()` method.
 
 `PizzaOrder` should have the following Prototype methods:
 
-* `PizzaOrder.prototype.start()` - starts making the `Pizza`. `timeToMake` is important here ;)
-* `PizzaOrder.prototype.ready(callback)` - takes a `callback` function, which is fired when the Pizza is ready - this when `timeToMake` time passes. The callback should be fired with the `Pizza` instance as an argument, followed by the `PizzaOrder` instance!
+* `PizzaOrder.prototype.start` - starts making the `Pizza`. `timeToMake` is important here ;)
+* `PizzaOrder.prototype.ready = function(callback) { ... }` - takes a `callback` function, which is fired when the Pizza is ready - this when `timeToMake` time passes. The callback should be fired with the `Pizza` instance as an argument, followed by the `PizzaOrder` instance!
 
 For example:
 
