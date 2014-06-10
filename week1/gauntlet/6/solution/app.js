@@ -1,63 +1,40 @@
-/*
-* Solution by Deyan Yanakiev
-* GitHub - https://github.com/lostm1nd
-*/
 $(document).ready(function() {
 	'use strict';
 
-	var ALL_STUDENTS = [],
-		leftSelect = $('#container').find('select').first(),
-		moveRightBtn = $('#container').find('button').first(),
-		rightSelect = $('#container').find('select').last(),
-		moveLeftBtn = $('#container').find('button').last();
-
-	moveRightBtn.on('click', function() {
-		var selectedValues = leftSelect.val();
-
-		// check if there is actually
-		// some option that is selected
-		// cannot forEach null
-		if (selectedValues) {
-			selectedValues.forEach(function(val) {
-				var element = leftSelect.find('option[value="' + val + '"]');
-				element.remove();
-				element.removeAttr('selected');
-				rightSelect.append(element);
-			});
-		}
-	});
-
-	moveLeftBtn.on('click', function() {
-		var selectedValues = rightSelect.val();
+	// the data-list attr gets the id
+	// of the list from which we need to
+	// move elements and the listToMoveTo
+	// is the other list (left or right)
+	$('button').on('click', function() {
+		var listToMoveFrom = $(this).attr('data-list'),
+			selectedValues = $(listToMoveFrom).val(),
+			listToMoveTo = (listToMoveFrom === '#leftSelect') ?
+							'#rightSelect' : '#leftSelect';
 
 		// check if there is actually
 		// some option that is selected
 		// cannot forEach null
 		if (selectedValues) {
 			selectedValues.forEach(function(val) {
-				var element = rightSelect.find('option[value="' + val + '"]');
-				element.remove();
+				var element = $(listToMoveFrom).find('option[value="' + val + '"]');
 				element.removeAttr('selected');
-				leftSelect.append(element);
+				$(listToMoveTo).append(element);
 			});
 		}
 	});
-
 
 	$.getJSON('http://localhost:3000/students', function(students) {
-		ALL_STUDENTS = students;
-
-		populateLeftSelect();
+		populateLeftSelect(students);
 	});
 
-	function populateLeftSelect() {
-		ALL_STUDENTS.forEach(function(student) {
+	function populateLeftSelect(students) {
+		students.forEach(function(student) {
 			var option = $('<option>');
 
 			option.attr('value', student.id);
 			option.text(student.name);
 
-			leftSelect.append(option);
+			$('#leftSelect').append(option);
 		});
 	}
 });

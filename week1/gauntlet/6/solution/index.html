@@ -10,20 +10,20 @@
         <h1>Move selected items from the first list to the second list</h1>
         <div class="row">
             <div class="col-xs-4">
-                <select size="10" multiple class="form-control">
+                <select size="10" multiple class="form-control" id="leftSelect">
                 </select>
             </div>
             <div class="col-xs-1 buttons">
                 <div class="button-control">
-                    <button class="btn btn-success">--&gt;</button>
+                    <button class="btn btn-success" data-list="#leftSelect">--&gt;</button>
                 </div>
 
                 <div class="button-control">
-                    <button class="btn btn-warning">&lt;--</button>
+                    <button class="btn btn-warning" data-list="#rightSelect">&lt;--</button>
                 </div>
             </div>
             <div class="col-xs-4">
-                <select multiple size="10" class="form-control">
+                <select multiple size="10" class="form-control" id="rightSelect">
                 </select>
             </div>
         </div>
