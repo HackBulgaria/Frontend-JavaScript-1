@@ -123,7 +123,7 @@ We should be able to move the Robot around with the following methods:
 * `this.moveRight = function(amount) { ... }`
 * `this.moveUp = function(amount) { ... }`
 * `this.moveDown = function(amount) { ... }`
-* `this.getPoistion` - returns a point of the current position of the Robot.
+* `this.getPosition` - returns a point of the current position of the Robot.
 
 Everywhere, `amount` is an integer.
 
