@@ -91,6 +91,14 @@ Which leads us to the next stage - where should we add methods? To `this` or to 
 
 #### Adding methods to this
 
+If we add methods to `this`, they will be created every time we call the constructor function with `new`
+
+But when we create a new object, the method, attached to `this` will alocate it's own memory.
+
+This means that if we create 10 instances of a given class, we will have 10 different instances for that method, attached to `this`.
+
+A good topic on the difference between `this.method` vs `prototype.method` can be found here - http://stackoverflow.com/questions/310870/use-of-prototype-vs-this-in-javascript
+
 #### Adding methods to prototype
 
 ### Making things private - getters and setters
@@ -99,7 +107,44 @@ Which leads us to the next stage - where should we add methods? To `this` or to 
 
 ### Object.create()
 
-### Literal Objects with private parts
+### Literal Objects with private parts - closures
+
+A basic closure example with a counter:
+
+```javascript
+var counter = (function() {
+  var count = 0;
+
+  return function() {
+    count = count + 1;
+    return count;
+  }
+} () );
+```
+
+If we want to create a literal object with private parts, we enclose the literal object with an anonymous function, that calls itself immediately.
+
+__This is called an IIFE (Immediately Invoked Function Expression)__
+
+Here is an example with a `basePerson` with private parts:
+
+```javascript
+// function closure
+var basePerson = (function() {
+  var _private = {
+
+  };
+
+  return {
+    setName : function(name) {
+      personName = name;
+    },
+    getName : function() {
+      return personName;
+    }
+  };
+} () );
+```
 
 ### Inheritence in JavaScript
 
