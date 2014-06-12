@@ -43,6 +43,33 @@ p.secondName = "Donchev";
 p.age = 21;
 ```
 
+If we want to add methods to our `Person` class, we can attach functions to this:
+
+```javascript
+function Person(firstName, secondName, age) {
+    this.firstName = firstName;
+    this.secondName = secondName;
+    this.age = age;
+
+    this.getName = function() {
+      return [firstName, secondName].join(" ");
+    }
+
+    this.sayHello = function() {
+      return ["I", "am", this.getName()].join(" ");
+    }
+}
+```
+
+Now if we want to use those methods, we can access them with the dot notation:
+
+```javascript
+var p = new Person("Bobi", "Donchev", 20);
+
+p.getName(); // "Bobi Donchev"
+p.sayHello(); // "I am Bobi Donchev"
+```
+
 ### Prototype of an object - adding methods
 
 ### Factory - instanceof this - calling with new vs. just calling the constructor
