@@ -72,7 +72,26 @@ p.sayHello(); // "I am Bobi Donchev"
 
 ### Prototype of an object - adding methods
 
-### Factory - instanceof this - calling with new vs. just calling the constructor
+In JavaScript, every object have something, that is called a prototype.
+
+The prototype is simply another Object, "linked" to our current object.
+
+For example, in JavaScript, every object "inherits" from `Object`. But since we have no syntax for classes or inheritence, it is done by linking the prototype chain.
+
+Check this:
+
+![Object Prototype](https://raw.githubusercontent.com/HackBulgaria/Frontend-JavaScript-1/master/week2/material_images/object_prototype.png)
+
+Every object, has a hidden `__proto__` property, which links to:
+
+1. First, its own prototype - we will see next that is this
+2. In the current object's prototype, there is another __proto__, which links to the prototype of `Object`, where all `Object` methods are linked.
+
+Which leads us to the next stage - where should we add methods? To `this` or to our prototype?
+
+#### Adding methods to this
+
+#### Adding methods to prototype
 
 ### Making things private - getters and setters
 
@@ -117,7 +136,7 @@ function Student(firstName, secondName, age) {
 }
 
 Student.prototype = Object.create(Person.prototype);
-Student.constructor = Student;
+Student.prototype.constructor = Student;
 
 
 Student.prototype.toString = function() {
