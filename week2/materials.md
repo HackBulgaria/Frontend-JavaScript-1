@@ -11,7 +11,7 @@ We are going to start working with OOP JavaScript! There are few very different 
 
 ### Making a new object - Constructor Function
 
-We can make a new object of a given type, by providing the so-called "constructor function".
+We can make a new object of a given type, by providing the so-called __"constructor function"__.
 
 This is a normal JavaScript function, that we write with uppercase to indicate that it will be a constructor for an object.
 
@@ -24,6 +24,7 @@ function Person(firstName, secondName, age) {
     this.age = age;
 }
 
+// we call the function with this
 var p = new Person("Bobi", "Donchev", 20);
 ```
 
@@ -34,6 +35,12 @@ Now the variable `p` is a object from the type `Person`
 p.firstName;
 p.secondName;
 p.age;
+
+
+// modifying
+p.firstName = "Ivo";
+p.secondName = "Donchev";
+p.age = 21;
 ```
 
 ### Prototype of an object - adding methods
