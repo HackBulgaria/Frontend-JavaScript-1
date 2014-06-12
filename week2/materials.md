@@ -85,7 +85,7 @@ Check this:
 Every object, has a hidden `__proto__` property, which links to:
 
 1. First, its own prototype - we will see next that is this
-2. In the current object's prototype, there is another __proto__, which links to the prototype of `Object`, where all `Object` methods are linked.
+2. In the current object's prototype, there is another `__proto__`, which links to the prototype of `Object`, where all `Object` methods are linked.
 
 Which leads us to the next stage - where should we add methods? To `this` or to our prototype?
 
@@ -132,19 +132,25 @@ Here is an example with a `basePerson` with private parts:
 // function closure
 var basePerson = (function() {
   var _private = {
-
+    personName : ""
   };
 
   return {
     setName : function(name) {
-      personName = name;
+      _private.personName = name;
     },
     getName : function() {
-      return personName;
+      return _private.personName;
     }
   };
 } () );
 ```
+
+In our exampe, `_private` is seen only inside the enclosed function.
+
+The function returns a object literal, where we expose the public parts.
+
+The magic here is that the functions inside the public parts see `_private`, but private cannot be used or seen anywhere else.
 
 ### Inheritence in JavaScript
 
