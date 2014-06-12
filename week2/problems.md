@@ -49,7 +49,7 @@ For example:
 
 ```javascript
 "bobi".times(5); // "bobi bobi bobi bobi bobi"
-``` 
+```
 
 * `String.prototype.blank` - checks if the string is blank - either it is empty string ot it is containing only whitespace
 
@@ -191,3 +191,115 @@ For example, you can add a button, called `Start`, which triggers the process:
 * Run this forever :)
 
 You can use `setTimeout` method - https://developer.mozilla.org/en/docs/Web/API/window.setTimeout
+
+## Basic Inheritence
+
+We are going to try some basic JavaScript inheritence.
+
+In the file `shapes.js`, there is a type, called `Shape` with a `getType()` method, attached to `this` and `area()` method, attached to `Shape.prototype`
+
+You have to implemented 3 other types (classes):
+
+* `Rectangle`
+* `Triangle`
+* `Circle`
+
+Each new class should inherit `Shape` and provide the proper string for the `type` argument (i.e "rectangle" for Rectangle class)
+
+Each new class should implement its `area()` method. The needed arguments should be provided via the constructor of the class (for example - the sides of the rectangle)
+
+After you have implemented the classes, take a look at their prototype chains to understand what is going on!
+
+## Queue from a literal object
+
+Using a literal object - `{}` - create an object, that behaves like a queue.
+
+For example, if we store our queue like this:
+
+```javascript
+var queue = {
+    // implementation
+}
+```
+
+It should have the following methods:
+
+* `queue.push(item)` - pushes the item to the queue
+* `queue.pop()` - returns the item on top of the queue
+* `queue.isEmpty()` - returns true if the queue is empty
+
+## An Event Queue
+
+Create a single object, that behaves like an event queue! We can attach custom events with callbacks to them and also trigger those events.
+
+The object should have the following __public__ methods:
+
+* `.on(eventName, callback)` - adds the given `callback` for the given `eventName`
+* `.remove(eventName)` - removes all callbacks for the given `eventName`
+* `.trigger(eventName)` - fires the given `eventName` which calls all callbacks for that event
+
+__Everything else, regarding the implementation of the event queue should be private!__
+
+Here is an example usage:
+
+```javascript
+var queue = // implementation
+
+queue.on("PANIC_EVENT", function() {
+    console.log("PANIC_EVENT HAPPENED!")
+});
+
+queue.on("PANIC_EVENT", function() {
+    console.log("PANIC_EVENT HAPPENED AGAIN!");
+});
+```
+
+Now, if we call:
+
+```javascript
+queue.trigger("PANIC_EVENT");
+```
+
+This will log:
+
+```
+"PANIC_EVENT HAPPENED!"
+"PANIC_EVENT HAPPENED AGAIN!"
+```
+
+## The Bookstore
+
+This is the big one for this week.
+
+In the folder `bookstore`, there is a `client` and a `server`
+
+The server is a Node application, that serves an array of books at (this is default): `http://localhost:3000/books`
+
+Each book looks like this:
+
+```javascript
+{
+    "isbn": 60853980,
+    "title": "Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch",
+    "image_url": "https://d.gr-assets.com/books/1392528568m/12067.jpg",
+    "small_image_url": "https://d.gr-assets.com/books/1392528568s/12067.jpg",
+    "num_pages": 413,
+    "description": "&amp;lt;p&amp;gt;According to&amp;lt;em&amp;gt;The Nice and Accurate Prophecies of Agnes Nutter&amp;lt;/em&amp;gt;,&amp;lt;em&amp;gt;Witch&amp;lt;/em&amp;gt;&amp;&#35;40;the world&apos;s only&amp;lt;em&amp;gt;completely&amp;lt;/em&amp;gt;accurate book of prophecies, written in 1655, before she exploded&amp;&#35;41;, the world will end on a Saturday. Next Saturday, in fact. Just before dinner.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;So the armies of Good and Evil are amassing, Atlantis is rising, frogs are falling, tempers are flaring. Everything appears to be going according to Divine Plan. Except a somewhat fussy angel and a fast-living demon—both of whom have lived amongst Earth&apos;s mortals since The Beginning and have grown rather fond of the lifestyle—are not actually looking forward to the coming Rapture.&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;And someone seems to have misplaced the Antichrist . . .&amp;lt;/p&amp;gt;",
+    "average_rating": 4.27
+}
+```
+
+You have to implement the `client` - a bookstore simulation.
+
+### Features
+
+There are plenty of requirements for our booktstore:
+
+* You will have to fetch the books from the server and display them in a grid. You can see an example of the grid in `index.html`. There must be exatcly 3 books in a row.
+* For every book, the `Add to cart` button should add the book to the cart and update the cart with the __total number of pages in it__.
+* Once in the cart, you should be able to remove the book from the cart by clicking on the `Remove from card` button
+* When the `Read description` button, you should open a modal ( http://getbootstrap.com/javascript/#modals ) with the book's description
+
+And this is all ;)
+
+Use all the JavaScript knowledge you have up to now. Use `jQuery` too.
