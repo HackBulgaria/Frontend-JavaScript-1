@@ -19,6 +19,6 @@ exports.testNthFib2 = function (test) {
 };
 
 exports.testNthFib51 = function (test) {
-    test.equal(12586269025, fib(51));
+    test.equal(20365011074, fib(51));
     test.done();
 };
