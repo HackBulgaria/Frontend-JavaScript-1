@@ -1,15 +1,14 @@
 /*
-    Solution by Daniel Taskoff
-    @github: https://github.com/dtaskoff/
-*/
+ * Solution by Daniel Taskoff
+ * @github: https://github.com/dtaskoff/
+ */
 
-'use strict';
+"use strict";
 
-
-var fib = (function ( ) {
-    // 1st fibonacci number is 0
+var fib = (function () {
+    // 1st fibonacci number is 1
     // 2nd fibonacci number is 1, etc...
-    var memo = [0, 0, 1];
+    var memo = [0, 1, 1];
     return function nth_fib(m) {
         if (memo[m] === undefined) {
             memo[m] = nth_fib(m - 1) + nth_fib(m - 2);
@@ -18,7 +17,25 @@ var fib = (function ( ) {
     };
 } ( )) ;
 
-console.log('the 10th fibonacci number is: ' + fib(10));
-console.log('the 50th fibonacci number is: ' + fib(50));
+exports.fib = fib;
+
+/*
+ * Solution by Emanuela Mollova
+ * GitHub - https://github.com/EmanuelaMollova/
+ */
+
+var range = function(from, to) {
+    return from > to ? [] : [from].concat(range(from + 1, to));
+};
+
+var fib = function(n) {
+    if(n < 0) {
+        throw new RangeError("The number should not be negative.");
+    }
+
+    return range(1, n).reduce(function(currentValue) {
+        return [currentValue[1], currentValue[0] + currentValue[1]];
+    }, [0, 1])[0];
+};
 
 exports.fib = fib;
