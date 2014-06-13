@@ -13,6 +13,8 @@ exports.testSumOfMinAndMax123 = function (test) {
 };
 
 exports.testSumOfMinAndMaxEmpty = function (test) {
-    test.equals(0, sumOfMinAndMax([]));
+    test.throws(function() {
+      sumOfMinAndMax([])
+    });
     test.done();
 };
