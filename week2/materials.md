@@ -155,7 +155,14 @@ var counter = (function() {
     return count;
   }
 } () );
+
+counter(); // 1
+counter(); // 2
+counter(); // 3
+// and so on ...
 ```
+
+The important thing here is that the returned function sees the private `count` and keeps the value in memory, even after we have exited the funciton.
 
 If we want to create a literal object with private parts, we enclose the literal object with an anonymous function, that calls itself immediately.
 
