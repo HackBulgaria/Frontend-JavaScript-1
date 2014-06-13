@@ -89,6 +89,8 @@ Every object, has a hidden `__proto__` property, which links to:
 
 Which leads us to the next stage - where should we add methods? To `this` or to our prototype?
 
+A good topic on the difference between `this.method` vs `prototype.method` can be found here - http://stackoverflow.com/questions/310870/use-of-prototype-vs-this-in-javascript
+
 #### Adding methods to this
 
 If we add methods to `this`, they will be created every time we call the constructor function with `new`
@@ -97,9 +99,42 @@ But when we create a new object, the method, attached to `this` will alocate it'
 
 This means that if we create 10 instances of a given class, we will have 10 different instances for that method, attached to `this`.
 
-A good topic on the difference between `this.method` vs `prototype.method` can be found here - http://stackoverflow.com/questions/310870/use-of-prototype-vs-this-in-javascript
+If we want to have only 1 instance of the method for all object instances, we have to add it to the prototype of the object!
 
 #### Adding methods to prototype
+
+Every object has a `prototype` object, which is one for all instances.
+
+If we want to add a method to the prototype, we can do the following:
+
+```javascript
+function Person(firstName, secondName, age) {
+    this.firstName = firstName;
+    this.secondName = secondName;
+    this.age = age;
+
+    this.getName = function() {
+      return [firstName, secondName].join(" ");
+    }
+}
+
+Person.prototype.sayHello = function() {
+  return ["I", "am", this.getName()].join(" ");
+}
+```
+
+Now, `sayHello` is attached to the prototype and the function wont be created with every instance of `Person`
+
+We can still call `sayHello()` the standard way:
+
+```javascript
+var p = new Person("Bobi", "Donchev", 20);
+
+p.getName(); // "Bobi Donchev"
+p.sayHello(); // "I am Bobi Donchev"
+```
+
+`this` in the prototype function is the same `this`, which we use in the constructor function.
 
 ### Making things private - getters and setters
 
