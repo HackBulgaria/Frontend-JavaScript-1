@@ -1,7 +1,7 @@
 /*
-    Solution by Daniel Taskoff
-    @github: https://github.com/dtaskoff/
-*/
+ * Solution by Daniel Taskoff
+ * @github: https://github.com/dtaskoff/
+ */
 
 'use strict';
 
@@ -18,8 +18,26 @@ var sumOfDigits = function (number) {
     return sum;
 };
 
-console.log('sum of digits of 1234 is: ' + sumOfDigits(1234));
-console.log('sum of digits of -20794 is: ' + sumOfDigits(-20794));
-console.log('sum of digits of 42.42 is: ' + sumOfDigits(42.42));
+exports.sumOfDigits = sumOfDigits;
+
+/*
+ * Solution by Emanuela Mollova
+ * GitHub - https://github.com/EmanuelaMollova/
+ */
+
+var sumOfDigits = function(n) {
+    n = Math.abs(n);
+
+    return n
+        .toString()
+        .split("")
+        .map(function(char) {
+            return parseInt(char, 10);
+        })
+        .reduce(function(a, b) {
+            return a + b;
+        });
+
+};
 
 exports.sumOfDigits = sumOfDigits;
