@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Timer of Destiny!</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The Timer of Destiny!</h1>
+        <div class="row">
+            <div class="col-xs-4">
+                <h2>Set the timer:</h2>
+                <div>
+                    <label for="minutes">Minutes:</label>
+                    <input class="input-lg time" min="0" id="minutes" type="number">
+                </div>
+
+                <div>
+                    <label for="seconds">Seconds:</label>
+                    <input class="input-lg time" min="0" max="60" id="seconds" type="number">
+                </div>
+
+                <div id="buttons">
+                    <button class="btn btn-lg btn-success">Start Counting Up!</button>
+                    <button class="btn btn-lg btn-success">Start Counting Down!</button>
+                </div>
+            </div>
+
+            <div class="col-xs-8">
+                <p id="timer">
+                    <span id="minute-first-digit">0</span>
+                    <span id="minute-second-digit">0</span>
+                    :
+                    <span id="second-first-digit">0</span>
+                    <span id="second-second-digit">0</span>
+                </p>
+                <button class="btn btn-danger">Stop and Reset!</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
