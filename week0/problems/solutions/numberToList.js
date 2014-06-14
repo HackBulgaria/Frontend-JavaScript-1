@@ -5,7 +5,8 @@
 
 'use strict';
 
-
+// if n is negative
+// the result array will have "-" as a first element
 var numberToList = function (n) {
     return n.toString().split('');
 };

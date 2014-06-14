@@ -19,6 +19,6 @@ exports.testNumberToList1829 = function (test) {
 };
 
 exports.testNumberToListNegative777 = function (test) {
-    test.deepEqual(['-', 7, 7, 7], numberToList(-777));
+    test.deepEqual(["-", 7, 7, 7], numberToList(-777));
     test.done();
 };
