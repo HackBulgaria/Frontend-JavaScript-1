@@ -10,11 +10,15 @@ $(document).ready(function() {
 	// of the list from which we need to
 	// move elements and the listToMoveTo
 	// is the other list (left or right)
-	$('button').on('click', function() {
+	var getOppositeList = {
+		'#leftSelect': '#rightSelect',
+		'#rightSelect': '#leftSelect'
+	};
+
+	$('.btn').on('click', function() {
 		var listToMoveFrom = $(this).attr('data-list'),
 			selectedValues = $(listToMoveFrom).val(),
-			listToMoveTo = (listToMoveFrom === '#leftSelect') ?
-							'#rightSelect' : '#leftSelect';
+			listToMoveTo = getOppositeList[listToMoveFrom];
 
 		// check if there is actually
 		// some option that is selected
