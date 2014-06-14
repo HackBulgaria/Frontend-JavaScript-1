@@ -1,0 +1,14 @@
+.time {
+    width: 100px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#buttons button {
+    margin-top: 10px;
+}
+
+#timer {
+    font-size: 2em;
+    font-weight: bold;
+}
