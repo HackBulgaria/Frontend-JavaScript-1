@@ -21,3 +21,18 @@ exports.listToNumber = listToNumber;
 var listToNumber = function(n) {
   return parseInt(n.join(""), 10);
 };
+
+/*
+ * Solution by Christina Mileva
+ * GitHub - https://github.com/ChrisChrisi
+ */
+
+var listToNumber = function (digits) {
+    var result = digits.reduce(function (a, b) {
+        return a.toString() + b.toString();
+    });
+
+    return parseInt(result);
+};
+
+exports.listToNumber = listToNumber;
