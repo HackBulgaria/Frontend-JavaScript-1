@@ -41,7 +41,9 @@ __We can also do for-loops in the template by using the `_(arr).forEach` from lo
 var
     items = ["Edno", "Dve", "Tri"],
     template = "<ul><% _(items).forEach(function(item) { %><li><%= item %></li><% }); %></ul>",
-    parsedHtml = _.template(template, items);
+    parsedHtml = _.template(template, {
+        items: items
+    });
 
 console.log(parsedHtml); // "<ul><li>Edno</li><li>Dve</li><li>Tri</li></ul>"
 ```
