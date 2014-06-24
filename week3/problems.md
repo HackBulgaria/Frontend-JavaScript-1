@@ -48,7 +48,7 @@ var list = htmlGenerator.list({
         label: "Item 1"
     }, {
         label: "Item 2"
-    }];
+    }]
 })
 ```
 
