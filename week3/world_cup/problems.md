@@ -12,7 +12,7 @@ Repo page -> Settings -> Collaborators
 ```
 
 ##2. Make a simple html structure for your page. It shoud look like this:
-{{ SCREENSHOT }}
+![World Cup Problem Hack Bulgaria](https://www.youtube.com/watch?v=hiP14ED28CA)
 User twitter bootstrap!
 You dont have to make it exactly the same.
 
