@@ -28,6 +28,15 @@ function pluck(arr, property) {
   });
 }
 
+/*
+  If we sort the beer and fries by score and combine them, we will get the desired result
+
+  The algorithm is in several steps:
+  1. First, we split the items array into two groups, based on the type - beer or fries
+  2. Then we take only the score from each item in both group arrays
+  3. Then we sort by the score (Numeric sort, order does not matter)
+  4. Finally, we combine the elements by multiplying ai * bi and reducing after that
+*/
 var beerAndFries = function(items) {
   var
     groups = groupBy(function(item) {
