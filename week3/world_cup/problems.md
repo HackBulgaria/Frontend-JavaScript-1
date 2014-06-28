@@ -65,6 +65,6 @@ Load that value form the json. If the match has not started yet, don't show anyt
 ## 8. Team information
 You don't have to a screenshot for that. Use the power to make a separate page for every team, that shows information about team's matches. Look closely to the API and decide how to implement that. Make the interface as nice as possible. 
 
-## 9. Compear Teams
-Make a separate page for compearing teams. You may add more then 2 teams. Choose them with drop down menus. Make the green and red coloring while compearing.
+## 9. Compare Teams
+Make a separate page for comparing teams. You may add more then 2 teams. Choose them with drop down menus. Make the green and red coloring while comparing.
 ![World Cup Problem2 Hack Bulgaria](screenshot2.png?raw=true)
