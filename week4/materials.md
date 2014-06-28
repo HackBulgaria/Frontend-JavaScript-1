@@ -2,4 +2,4 @@
 
 ## Ajax & Promises
 
-## Canvas & HTML 5
+## Basic & Advanced HTML & CSS
