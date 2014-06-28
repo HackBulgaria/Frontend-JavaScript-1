@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swapping indexes</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Move selected items from the first list to the second list</h1>
+        <div class="row">
+            <div class="col-xs-4">
+                <select size="10" multiple class="form-control" id="leftSelect">
+                </select>
+            </div>
+            <div class="col-xs-1 buttons">
+                <div class="button-control">
+                    <button class="btn btn-success" data-list="#leftSelect">--&gt;</button>
+                </div>
+
+                <div class="button-control">
+                    <button class="btn btn-warning" data-list="#rightSelect">&lt;--</button>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <select multiple size="10" class="form-control" id="rightSelect">
+                </select>
+            </div>
+        </div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
