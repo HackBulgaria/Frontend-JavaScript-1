@@ -2,11 +2,11 @@
 
 Implement tabs functionality, using JavaScript.
 
-We have prepared for you `index.html` and `styles.css` for you.
+We have prepared for you `index.html` and `styles.css`.
 
 The JavaScript is your job!
 
-You have implement something that looks like this - http://jqueryui.com/tabs/
+You have to implement something that looks like this - http://jqueryui.com/tabs/
 
 ## Requirements
 
@@ -18,6 +18,6 @@ You have implement something that looks like this - http://jqueryui.com/tabs/
 </div>
 ```
 
-* At any given time, there should be only 1 tab selected and the content for that tab - displayed
-* If the user clicks on different tab, hide the content for the current tab and display the content for the newly selected tab.
-* Give some visual distinction for the selected tab. For example, the button can be different color.
+* __At any given time, there should be only 1 tab selected__ and the content for that tab - displayed
+* __If the user clicks on different tab__, hide the content for the current tab and display the content for the newly selected tab.
+* __Give some visual distinction for the selected tab.__ For example, the button can be different color.
