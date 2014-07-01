@@ -1,7 +1,10 @@
 # Materials for week4
 
-## Ajax & Promises
+## jQuery recap
 
-## Basic & Advanced HTML & CSS
+We need to have a good understanding of jQuery in order to move on with AJAX & Promises & CRUD applications.
 
-## Canvas & HTML 5
+Here are few very good materials that cover jQuery basics:
+
+* [try.jquery.com](http://try.jquery.com) - an interactive online course that will get you started
+* YouTube playlist with introduction videos to jQuery - https://www.youtube.com/watch?v=hMxGhHNOkCU&list=PLoYCgNOIyGABdI2V8I_SWo22tFpgh2s6_
