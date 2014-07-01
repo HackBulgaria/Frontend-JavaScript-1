@@ -1,0 +1,14 @@
+{
+  "name": "3-Slider",
+  "version": "0.0.0",
+  "homepage": "https://github.com/HackBulgaria/Frontend-JavaScript-1",
+  "authors": [
+    "RadoRado"
+  ],
+  "description": "Simple slider problem",
+  "main": "slider.html",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}

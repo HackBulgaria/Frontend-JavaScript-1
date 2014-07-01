@@ -1,25 +1,36 @@
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>Hack Bulgaria Swider</title>    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Gallery with Google Image Search</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="slider.css">
   </head>
   <body>
-    <div class="gallery-wrap">
-      <div class="gallery clearfix">
-        <div class="gallery__item">
-          <img src="images/image1.jpg" class="gallery__img" alt="" />
-        </div>
-         <div class="gallery__item">
-          <img src="images/image2.jpg" class="gallery__img" alt="" />
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          Enter image to search google:
+          <input type="text" class="input input-lg" />
+          <button class="btn">Load images!</button>
         </div>
       </div>
-      <div class="gallery__controls clearfix">
-        <div href="#" class="gallery__controls-prev">
-          <img src="images/prev.png" alt="" />
+      <div class="row gallery">
+        <div class="col-xs-2">
+          <button class="btn btn-success">To the Left</button>
         </div>
-        <div href="#" class="gallery__controls-next">
-          <img src="images/next.png" alt="" />
+
+        <div class="col-xs-8">
+          <img id="current-image" width="100%" height="100%" src="http://media.npr.org/assets/img/2012/01/04/ap99121501386_custom-feedbb6efa738efee47e7828e805758dc427fa60-s6-c30.jpg" alt="">
+        </div>
+
+        <div class="col-xs-2">
+          <button class="btn btn-success">To the Left</button>
         </div>
       </div>
     </div>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
