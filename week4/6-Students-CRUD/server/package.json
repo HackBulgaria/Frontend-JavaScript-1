@@ -1,0 +1,16 @@
+{
+  "name": "Students-CRUD",
+  "version": "0.0.0",
+  "description": "Simple CRUD server for students",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RadoRado",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5",
+    "mongoose": "^3.8.12"
+  }
+}

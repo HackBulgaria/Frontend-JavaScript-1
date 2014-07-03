@@ -1,0 +1,16 @@
+{
+  "name": "Mystery-Lock-Server",
+  "version": "0.0.0",
+  "description": "A server that helps you unlock a mystery by clicking on buttons",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RadoRado",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5",
+    "lodash": "^2.4.1"
+  }
+}
