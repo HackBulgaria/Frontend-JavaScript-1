@@ -1,8 +1,0 @@
-{
-	"jquery": true,
-	"browser": true,
-	"globals": {
-		"alert": true,
-		"confirm": true
-	}
-}

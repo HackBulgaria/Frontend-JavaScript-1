@@ -6,7 +6,7 @@
 'use strict';
 
 
-var format = require('./format').format;
+var format = require('./stringFormat').stringFormat;
 
 exports.testFormat = function (test) {
     test.equals('JavaScript is a very weird language!',

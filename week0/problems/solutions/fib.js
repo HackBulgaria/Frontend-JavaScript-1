@@ -39,3 +39,26 @@ var fib = function(n) {
 };
 
 exports.fib = fib;
+
+/*
+ * Solution by Christina Mileva
+ * GitHub - https://github.com/ChrisChrisi
+ */
+
+var fib = function (n) {
+    if(n === 0) {
+        return 0;
+    }
+
+    var cur = 1,
+        next = 1,
+        count = 2;
+    while (count < n) {
+        next = cur + next;
+        cur = next - cur;
+        count += 1;
+    }
+    return next;
+};
+
+exports.fib = fib;

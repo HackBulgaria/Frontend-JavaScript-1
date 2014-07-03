@@ -44,7 +44,7 @@ exports.testFilterInvalid = function (test) {
 exports.testReduce = function (test) {
     test.equals(10, reduce(function sum(a, b) {
         return a + b;
-    }, [1, 2, 3, 4]));
+    }, [1, 2, 3, 4], 0));
     test.done();
 };
 

@@ -10,12 +10,16 @@ var countSubstrings = function (haystack, needle) {
     return haystack.split(needle).length - 1;
 };
 
-console.log('haystack has ' +
-    countSubstrings('haystack', 'ays') +
-    ' ays\' in it');
+exports.countSubstrings = countSubstrings;
 
-console.log('needle has ' +
-    countSubstrings('needle', 'e') +
-    ' es in it');
+/*
+ * Solution by Emanuela Mollova
+ * GitHub - https://github.com/EmanuelaMollova/
+ */
+
+var countSubstrings = function(haystack, needle) {
+  var occurrences = haystack.match(new RegExp(needle, "g"));
+  return occurrences ? occurrences.length : 0;
+};
 
 exports.countSubstrings = countSubstrings;

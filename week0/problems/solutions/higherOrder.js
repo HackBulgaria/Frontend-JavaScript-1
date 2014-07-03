@@ -43,8 +43,8 @@ var filter = function (pred, arr) {
 };
 
 var reduce = function (func, arr, start) {
-    var result = start || 0,
-        i = 0,
+    var result = start || arr[0],
+        i = start ? 0 : 1,
         n = 0;
     if (!Array.isArray(arr)) {
         throw {
@@ -53,7 +53,7 @@ var reduce = function (func, arr, start) {
         };
     }
     n = arr.length;
-    for (i = 0; i < n; i += 1) {
+    for (i; i < n; i += 1) {
         result = func(result, arr[i]);
     }
     return result;
@@ -91,6 +91,66 @@ var all = function (pred, arr) {
         result = pred(arr[i]);
     }
     return result;
+};
+
+exports.map = map;
+exports.filter = filter;
+exports.reduce = reduce;
+exports.any = any;
+exports.all = all;
+
+
+/*
+ * Solution by Emanuela Mollova
+ * GitHub - https://github.com/EmanuelaMollova/
+ */
+
+var map = function(f, arr) {
+    var result = [];
+
+    arr.forEach(function(value, index, arr) {
+        result.push(f(value, index, arr));
+    });
+
+    return result;
+};
+
+var filter = function(f, arr) {
+    var result = [];
+
+    arr.forEach(function(value, index, arr) {
+        if(f(value, index, arr)) {
+            result.push(value);
+        }
+    });
+
+    return result;
+};
+
+// var reduce = function(f, arr, initial) {
+//     if(initial === undefined) {
+//         throw new Error('There is no initial value.');
+//     }
+
+//     var accum = initial;
+
+//     arr.forEach(function(elem) {
+//         accum = f(accum, elem);
+//     });
+
+//     return accum;
+// };
+
+var any = function(pred, arr) {
+    return arr.map(pred).reduce(function(a, b) {
+        return a || b;
+    });
+};
+
+var all = function(pred, arr) {
+    return arr.map(pred).reduce(function(a, b) {
+        return a && b;
+    });
 };
 
 exports.map = map;
