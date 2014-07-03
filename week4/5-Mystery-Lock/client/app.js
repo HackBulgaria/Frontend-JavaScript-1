@@ -27,8 +27,30 @@ $(document).ready(function() {
             left: x + "px",
             top: y + "px"
           });
+          $(val).attr("data-angle", angle);
           angle += increase;
     });
+
+    rotateCircle($elements);
+  }
+
+  function rotateCircle($elements) {
+    $elements.each(function() {
+      var angle = parseFloat($(this).attr("data-angle")),
+          newAngle = angle + 0.02,
+          newX = 300 * Math.cos(newAngle) + 300,
+          newY = 300 * Math.sin(newAngle) + 300;
+
+      $(this).attr("data-angle", newAngle);
+      $(this).css({
+        left: newX + "px",
+        top: newY + "px"
+      });
+    });
+
+    setTimeout(function() {
+      rotateCircle($elements);
+    }, 150);
   }
 
 
