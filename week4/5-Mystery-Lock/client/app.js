@@ -27,8 +27,28 @@ $(document).ready(function() {
             left: x + "px",
             top: y + "px"
           });
+          $(val).attr("data-angle", angle);
           angle += increase;
     });
+  }
+
+  function rotateCircle($elements) {
+    $elements.each(function() {
+      var angle = parseFloat($(this).attr("data-angle")),
+          newAngle = angle + 0.01,
+          newX = 300 * Math.cos(newAngle) + 300,
+          newY = 300 * Math.sin(newAngle) + 300;
+
+      $(this).attr("data-angle", newAngle);
+      $(this).css({
+        left: newX + "px",
+        top: newY + "px"
+      });
+    });
+
+    setTimeout(function() {
+      rotateCircle($elements);
+    }, 30);
   }
 
 
@@ -45,7 +65,10 @@ $(document).ready(function() {
     });
 
     $("#buttons-container").append(buttonsHtml);
-    layoutCircle($(".secret-button"));
+    var $buttons = $(".secret-button");
+
+    layoutCircle($buttons);
+    rotateCircle($buttons);
 
     enableButton(0);
   });
