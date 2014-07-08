@@ -224,3 +224,17 @@ function showPosition(position) {
 Drag and drop is  NOW A PART of the HTML5 standard.
 
 For a good example of drag and drop code look here: http://www.w3schools.com/html/html5_draganddrop.asp
+
+## Local storage
+
+With HTML5, web pages can store data locally within the user's browser.
+
+Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server.
+
+The localStorage object stores the data with no expiration date. The data will not be deleted when the browser is closed, and will be available the next day, week, or year.
+
+
+```
+localStorage.setItem("hacker_name", "Dinko");
+localStorage.getItem("hacker_name");
+```
