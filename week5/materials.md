@@ -238,3 +238,23 @@ The localStorage object stores the data with no expiration date. The data will n
 localStorage.setItem("hacker_name", "Dinko");
 localStorage.getItem("hacker_name");
 ```
+
+## DO NOT DO THIS!
+
+1. Inline styles
+No, no, no! Just don't!
+
+```
+<div style="padding: 20px;"></div>
+```
+
+2. Duplication ids
+
+id's must be unique! If you have to duplicate them just use classes
+```
+<div id="small-text"></div>
+...
+<p id="small-text"></p>
+```
+
+3. 
