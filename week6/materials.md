@@ -13,4 +13,4 @@ Using WebSockets, the client can push information to the server and the server c
 * A good starting material for WebSockets is this - http://www.html5rocks.com/en/tutorials/websockets/basics/
 * MDN Reference for WebSockets has useful information too - https://developer.mozilla.org/en-US/docs/WebSockets
 * This 2 minute video from Ericsson Labs shows example usage of WebSockets - https://www.youtube.com/watch?v=Z897fkPn7Rw
-* To work with WebSockets, we are going to use the `[Socket.IO](http://socket.io/)` library
+* To work with WebSockets, we are going to use the [`Socket.IO`](http://socket.io/) library
