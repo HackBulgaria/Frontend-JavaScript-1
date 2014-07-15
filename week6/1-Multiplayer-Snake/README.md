@@ -87,9 +87,17 @@ Once there is a hosted game and a player joins it, a `start` event is emiited wi
 
 ```javascript
 {
-    "player1": "Player1 name here",
+    "player1": "Player 1 name here",
     "player2": "Player 2 name here"
 }
+```
+
+To listen for this event on the client, you can do:
+
+```javascript
+socket.on("start", function(data) {
+    // data is the payload from the server
+});
 ```
 
 #### render event
