@@ -2,7 +2,7 @@
 
 We are going to extend our snake and make it multiplayer!
 
-By multiplayer, we mean two players playing from two different browsers and competing to get the food.
+By multiplayer, we mean two players playing from two different browsers and competing (or collaborating) to get the food.
 
 __Quick facts:__
 
@@ -15,7 +15,23 @@ This one is more complicated.
 
 In the `server` folder, there is a `server.js` that serves both as a HTTP and Socket server.
 
-You have to run `npm install` and `node server.js` to run it.
+You have to run `npm install` and `node server.js` to start it.
+
+In order to have the server running for both players, one of you has to start the server with `node server.js` and then, find out his IP in the local network:
+
+```
+$ ifconfig
+```
+
+For example, if your IP is `192.168.1.17` - this will be the location of the server.
+
+In the client, both players shoud have to point to the IP adress, instead of `localhost`:
+
+```javascript
+var socket = new io("http://192.168.1.17:3000");
+```
+
+Like this, the server will be shared between the clients.
 
 ### HTTP API
 
