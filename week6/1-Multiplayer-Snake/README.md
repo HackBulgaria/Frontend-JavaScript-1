@@ -102,7 +102,7 @@ socket.on("start", function(data) {
 
 #### render event
 
-THe server emits a `render` event with the data, that pass passed from one of the clients with the `move` event.
+The server emits a `render` event with the data, that pass passed from one of the clients with the `move` event.
 
 `render` is simply an echo to the players in the given game with the data from `move`
 
@@ -123,6 +123,18 @@ When a `move` event is fired, both clients receive `render` from the server with
 
 You have to decide the format of the data.
 
+For example:
+
+```javascript
+// from player1
+socket.emit("move" {
+    player1Snake: snake.getSections()
+})l
+```
+
+In order to start the game, it is a good idea to have hard-coded locations in the client for the starting positions of both snakes.
+
+After this, exchange positions with the move event.
 ## Game Design
 
 This should be your choice.
