@@ -1,0 +1,68 @@
+<input type="text" id="playerName" value="RadoRado">
+<button id="createGame">Create Game</button>
+
+<br>
+<input type="text" id="joinGameId">
+<button id="joinGame">Join Game</button>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/socket.io-client/socket.io.js"></script>
+
+<script>
+    $(function() {
+        console.log("I AM READY");
+        var
+            socket = new io("http://localhost:3000"),
+            socketId = null,
+            gameId = null;
+
+        window.socket = socket;
+
+        socket.on("connect", function(data) {
+            socketId = socket.io.engine.id;
+            runAfterSocketHasConnected();
+        });
+
+        socket.on("start", function(data) {
+            console.log("game has started");
+            console.log(data);
+        });
+
+        socket.on("render", function(data) {
+            console.log("Should render now");
+            console.log(data);
+        });
+
+        function runAfterSocketHasConnected() {
+            $("#createGame").on("click", function() {
+                $.ajax({
+                    url: "http://localhost:3000/createGame",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        playerName: $("#playerName").val(),
+                        socketId: socketId
+                    })
+                }).done(function(result) {
+                    gameId = result.gameId;
+                    console.log("Game is created with id: ", gameId);
+                });
+            });
+
+            $("#joinGame").on("click", function() {
+                gameId = $("#joinGameId").val();
+                $.ajax({
+                    url: "http://localhost:3000/joinGame",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        playerName: $("#playerName").val(),
+                        socketId: socketId,
+                        gameId: gameId
+                    })
+                }).done(function(result) {
+                    console.log(result);
+                });
+            });
+        }
+    });
+</script>

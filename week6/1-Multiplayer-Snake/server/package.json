@@ -1,0 +1,21 @@
+{
+  "name": "Snake_Socket_server",
+  "version": "0.0.0",
+  "description": "Simple Node server that combines HTTP and WebSockets for multiplayer snake",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express.js",
+    "socket.io"
+  ],
+  "author": "RadoRado",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.6.1",
+    "lodash": "^2.4.1",
+    "socket.io": "^1.0.6"
+  }
+}
