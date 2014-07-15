@@ -92,6 +92,8 @@ The data is not specified and it is up to you to decide what kind of data you sh
 
 The idea behind the `move` event is to send the server your coordinates in order to update the game for the other player.
 
+In the `move` event, the client *must* provide the *gameId*!
+
 
 When a `move` event is fired, both clients receive `render` from the server with the data, that was passed to the `move` event.
 
