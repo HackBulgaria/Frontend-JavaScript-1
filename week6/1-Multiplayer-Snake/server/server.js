@@ -54,7 +54,11 @@ function socketDisconected(socketId) {
       } else {
         target = players[0];
       }
-      emitTo([target.socketId], "game_disconnected", {});
+
+      // if we have 2 players
+      if(target) {
+        emitTo([target.socketId], "game_disconnected", {});
+      }
     }
     return false;
   });
