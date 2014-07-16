@@ -46,7 +46,8 @@ function socketDisconected(socketId) {
     hostId = _.pluck(players.filter(isHost), "socketId");
     console.log("The host is %s", hostId);
 
-    if(_.contains(socketId, _.pluck(players, "socketId"))) {
+    if(_.contains(_.pluck(players, "socketId"), socketId)) {players
+      console.log("Players found in game %s", gid);
       gameId = gid;
       if(socketId === players[0].socketId) {
         target = players[1];
@@ -55,10 +56,11 @@ function socketDisconected(socketId) {
       }
       emitTo([target.socketId], "game_disconnected", {});
     }
-
-    delete gameIdToPlayers[gameId];
-    delete hostToGameId[hostId];
+    return false;
   });
+
+  delete gameIdToPlayers[gameId];
+  delete hostToGameId[hostId];
 }
 
 // "{playerName}-{5 letters from socketId} - {random number between 1 and 1000}"
@@ -158,7 +160,10 @@ app.post("/joinGame", function(req, res) {
         "error": "This game is not hosted"
       });
     }
+});
 
+app.get("/games", function(req, res) {
+  res.json(gameIdToPlayers);
 });
 
 http.listen(3000, function(){
