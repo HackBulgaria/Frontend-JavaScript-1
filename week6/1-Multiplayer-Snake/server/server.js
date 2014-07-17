@@ -10,7 +10,7 @@ var
 
 function emitTo(sockets, message, data) {
   sockets.forEach(function(socket) {
-    if(typeof  socket === "string") {
+    if(typeof socket === "string") {
       socket = connectedClients[socket];
     }
     socket.emit(message, data);
@@ -43,10 +43,10 @@ function socketDisconected(socketId) {
       }
 
     // first, find the host so we can delete it's record
-    hostId = _.pluck(players.filter(isHost), "socketId");
+    hostId = _.pluck(players.filter(isHost), "socketId").pop();
     console.log("The host is %s", hostId);
 
-    if(_.contains(_.pluck(players, "socketId"), socketId)) {players
+    if(_.contains(_.pluck(players, "socketId"), socketId)) {
       console.log("Players found in game %s", gid);
       gameId = gid;
       if(socketId === players[0].socketId) {
