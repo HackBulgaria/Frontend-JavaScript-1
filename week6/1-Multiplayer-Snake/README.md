@@ -35,7 +35,7 @@ Like this, the server will be shared between the clients.
 
 ### HTTP API
 
-The serves exposes two HTTP methods:
+The serves exposes the following HTTP methods:
 
 #### POST `/createGame`
 
@@ -77,11 +77,17 @@ The request payload is:
 Once a player joins a hosted game, __socket event__ `"start"` is emitted to both players.
 
 
+#### GET `/games`
+
+This is a very simple way to check the current games that are being played right now.
+
+The result is JSON of all games.
+
 ### Socket Events
 
 The server emits the following socket events:
 
-#### start event
+#### start
 
 Once there is a hosted game and a player joins it, a `start` event is emiited with the following payload:
 
@@ -100,7 +106,13 @@ socket.on("start", function(data) {
 });
 ```
 
-#### render event
+#### game_disconnected
+
+If the game has started and one of the players closes his browser, the serves destroys the current game and sends to the ohter player a `"game_disconnected"` message.
+
+This is a handy way not the crash the server or the UI.
+
+#### render
 
 The server emits a `render` event with the data, that pass passed from one of the clients with the `move` event.
 
