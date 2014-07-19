@@ -14,6 +14,8 @@ Every tree points that the user clicks on the canvas, should create a new triang
 
 Every triangle should have a fill color, that should be selected by a color input. Once a color is selected, every next triangle is filled by that color.
 
+[__Use an HTML 5 color input!__](http://www.w3schools.com/html/tryit.asp?filename=tryhtml5_input_type_color)
+
 The position of the color input is up to you!
 
 ### Clearing the canvas
