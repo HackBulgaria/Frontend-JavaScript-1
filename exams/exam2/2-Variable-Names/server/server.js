@@ -9,7 +9,7 @@ var
   parseInt10 = function(x) {
     return parseInt(x, 10);
   },
-  names = [ "James Isreal", 
+  names = [ "James Isreal",
             "Earlean Porche",
             "Emilio Millen",
             "Elna Dukes",
@@ -20,7 +20,7 @@ var
             "Allyn Barbara",
             "Kiera Mcbath",
             "Mattie Vieira",
-            "Tomasa Cummings", 
+            "Tomasa Cummings",
             "Daina Kocian",
             "Doreatha Fountaine",
             "Claribel Stigall",
