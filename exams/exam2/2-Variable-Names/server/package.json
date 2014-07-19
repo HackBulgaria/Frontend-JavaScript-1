@@ -1,0 +1,15 @@
+{
+  "name": "variable-names-server",
+  "version": "0.0.1",
+  "description": "Quick express server that retuns a bunch of names",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RadoRado",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.6.1"
+  }
+}
