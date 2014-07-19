@@ -26,7 +26,7 @@ The payload for this post is in JSON format:
 }
 ```
 
-This updates the givem `nameId` with the new `name` that was passed
+This updates the given `nameId` with the new `name`.
 
 ## Your job.
 
@@ -34,9 +34,9 @@ You have to make a small web app that lists all names from the server by putting
 
 The UI should look something like this:
 
-![Image Here]()
+![UI Mockup](https://raw.githubusercontent.com/HackBulgaria/Frontend-JavaScript-1/master/exams/exam2/2-Variable-Names/mockup.png)
 
-The requirements are:
+__The requirements are:__
 
 * Load all names from the server and display them as text inputs with "Update Name" button next to them. __The button should be disabled at first.__
 * Once the name is changed, enable the button next to the changed name.
