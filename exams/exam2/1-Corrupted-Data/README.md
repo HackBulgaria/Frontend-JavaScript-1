@@ -12,7 +12,7 @@ To get `data.json` inside your node script, it it as simple as:
 
 ```javascript
 // this will load data.json on the same level as the script
-var data = require("data");
+var data = require("./data");
 // data now is a JS object
 ```
 
