@@ -1,0 +1,21 @@
+{
+  "name": "6-load-bootstrap-from-bower",
+  "version": "0.0.0",
+  "homepage": "https://github.com/HackBulgaria/Frontend-JavaScript-1",
+  "authors": [
+    "Radoslav Georgiev <g2h.horde@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.14",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.2.0"
+  }
+}
