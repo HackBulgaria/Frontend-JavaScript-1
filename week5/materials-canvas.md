@@ -19,7 +19,7 @@ Call its `getContext()` method (you must pass the string `"2d"` to the `getConte
 The `getContext("2d")` object is a built-in HTML5 object, with many properties and methods for drawing paths, boxes, circles, text, images, and more.
 
 
-## Canvas can drow lines
+## Canvas can draw lines
 
 That will make a stroke from 0,0 to 200,100
 
@@ -31,7 +31,7 @@ ctx.lineTo(200,100);
 ctx.stroke();
 ```
 
-## Canvas can drow text:
+## Canvas can draw text:
 
 `fillText(text,x,y)` - Draws "filled" text on the canvas
 
@@ -42,7 +42,7 @@ ctx.font = "30px Arial";
 ctx.fillText("Hello Hack Bulgaria", 10, 50);
 ```
 
-## Canvas can drow Images
+## Canvas can draw Images
 
 This can be achieved by - `drawImage(image,x,y)`
 
