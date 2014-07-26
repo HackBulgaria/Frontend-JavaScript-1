@@ -1,6 +1,6 @@
 # HTML5 cheatcsheet
 
-## DOCTYPE declaration 
+## DOCTYPE declaration
 
 The <!DOCTYPE> declaration helps the browser to display a web page correctly.
 
@@ -19,7 +19,7 @@ HTML4.01
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 ```
 
-## HTML Comments 
+## HTML Comments
 
 ```
 <!-- Write your comments here -->
@@ -64,14 +64,14 @@ Define the author of a page:
 ```
 
 
-## HTML Blocks 
+## HTML Blocks
 
 HTML elements can be grouped together with <div> and <span>.
 
 ### HTML Block Elements
 Block level elements normally start (and end) with a new line when displayed in a browser.
 
-Examples: 
+Examples:
 ```
 <div>, <h1>, <p>, <ul>, <table>
 ```
@@ -80,15 +80,15 @@ Examples:
 Inline elements are normally displayed without starting a new line.
 
 Examples:
-``` 
+```
 <b>, <td>, <a>, <img>, <span>
 ```
 
-## Forms are fat: 
+## Forms are fat:
 
 HTML forms are used to pass data to a server.
 
-Example: 
+Example:
 ```
 <form>
 First name: <input type="text" name="firstname"><br>
@@ -122,7 +122,7 @@ Dropdown menus does the same work:
 Checkboxes let a user select ZERO or MORE options of a limited number of choices.
 ```
 <input type="checkbox" name="course" value="java">Java<br>
-<input type="checkbox" name="course" value="javascirpt">JavaScript 
+<input type="checkbox" name="course" value="javascirpt">JavaScript
 ```
 
 Multuple choice menu does the same!
@@ -214,8 +214,8 @@ function getLocation() {
     }
 }
 function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude; 
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
 }
 </script>
 ```
@@ -256,5 +256,3 @@ id's must be unique! If you have to duplicate them just use classes
 ...
 <p id="small-text"></p>
 ```
-
-3. 
