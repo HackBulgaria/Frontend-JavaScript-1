@@ -14,12 +14,24 @@ The server is very simple and will respond with JSON if the upload is successful
 
 If you want to dry-test the server with cURL, this is a helpful link - https://ariejan.net/2010/06/07/uploading-files-with-curl/
 
+### tmp folder in server
+
+The server needs a local `tmp` folder in order to work with the file upload.
+
+If you look in the `server/.gitignore` file, you will see `tmp/` there, so you need to create a local copy for you:
+
+```
+mkdir tmp
+```
+
 ## HTML 5 API for Drag & Drop
 
 Your first task is to create a web app, that uses the Drag & Drop API for File Uploads - http://html5doctor.com/drag-and-drop-to-server/
 
 __* Use promises to make all XHR calls and to track file upload progress!__
 __* Use RequireJS to make it more modular!__
+
+When you are appending things to `FormData` object, be sure to place it under `'filedata'` key, because the server is looking for that!
 
 ## Refactor the server
 
