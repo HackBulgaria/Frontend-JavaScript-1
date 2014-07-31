@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title></title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#/">GitHub</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#/statistics">User stats</a></li>
+          </ul>
+          <img src="images/loading.gif" class="loading-image" id="spinner">
+        </div>
+      </div>
+    </nav>
+    <div id="alert-container"></div>
+  </header>
+  <section id="main-container">
+  </section>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
+  <script src="bower_components/Chart.js/Chart.min.js"></script>
+  <script src="js/TemplateManager.js"></script>
+  <script src="js/views/Home.js"></script>
+  <script src="js/views/User.js"></script>
+  <script src="js/views/Stats.js"></script>
+  <script src="js/views/Main.js"></script>
+  <script src="js/models/User.js"></script>
+  <script src="js/models/UserCollection.js"></script>
+  <script src="js/controllers/FrontCtrl.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/models/User.js"></script>
+  <script src="js/models/UserCollection.js"></script>
+</body>
+</html>
