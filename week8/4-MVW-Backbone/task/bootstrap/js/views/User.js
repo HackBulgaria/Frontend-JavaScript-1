@@ -1,6 +1,6 @@
 /* global Backbone */
 
-var GitHubApp = GitHubApp || GitHubApp;
+var GitHubApp = GitHubApp || {};
 
 GitHubApp.Views = GitHubApp.Views || {};
 
