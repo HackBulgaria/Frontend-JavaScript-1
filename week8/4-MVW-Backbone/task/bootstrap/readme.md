@@ -45,3 +45,8 @@ After that start a static HTTP server with root the web application's root direc
 ### User.js
 
 1. Implement the `url` method by appending the user name of the current user to the end of the URL: `https://api.github.com/users/`. As query parameters add: `?client_id=8f3b8d572129632cf422&client_secret=f0669941c23378c30fb89f6c37be9075a5628bba`.
+
+## Homework
+
+1. Cache the model data, once loaded.
+2. Fire `load.start` event when the template starts loading.
