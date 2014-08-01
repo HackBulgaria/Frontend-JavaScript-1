@@ -4,7 +4,7 @@ There are many [collaborative drawing tools](http://www.webdistortion.com/2011/0
 
 ## The Server
 
-For simplicity we're reusing the [Simple-WebSocket-Server][https://github.com/HackBulgaria/Simple-WebSocket-Server]
+For simplicity we're reusing the [Simple-WebSocket-Server](https://github.com/HackBulgaria/Simple-WebSocket-Server)
 
 ## The Client
 ### 1. Lone drawing

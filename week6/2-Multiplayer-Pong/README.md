@@ -3,7 +3,8 @@
 If you need a reminder about what precisely Pong is, [wikipedia can help][pong-wiki]
 
 ## The Server
-For simplicity we're reusing the [Simple-WebSocket-Server][https://github.com/HackBulgaria/Simple-WebSocket-Server]
+
+For simplicity we're reusing the [Simple-WebSocket-Server](https://github.com/HackBulgaria/Simple-WebSocket-Server)
 
 ## The Client
 ### 1. Implement a single-player pong
