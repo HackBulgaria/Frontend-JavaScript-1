@@ -50,3 +50,5 @@ After that start a static HTTP server with root the web application's root direc
 
 1. Cache the model data, once loaded.
 2. Fire `load.start` event when the template starts loading.
+3. The router should not be aware of the models. Initialize the model in the front controller and pass them to the view.
+4. Create a base view, which handles all DOM manipulations and knows about its base element. The controller should not be aware of the element where the partials are being rendered.
