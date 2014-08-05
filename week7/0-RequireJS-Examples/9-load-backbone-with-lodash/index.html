@@ -1,1 +1,23 @@
+<body>
+    <div id="counterView">
+
+    </div>
+
+    <div id="counterViewDisplay"></div>
+</body>
+
 <script data-main="scripts/app" src="bower_components/requirejs/require.js"></script>
+
+
+<script id="counterViewTemplate" type="text/template">
+    <div>
+        <input class="counterDisplay" type="number" />
+    </div>
+</script>
+
+<script id="counterTemplate" type="text/template">
+    <div>
+        <button class="incrementButton">Increment</button>
+        <button class="decrementButton">Decrement</button>
+    </div>
+</script>

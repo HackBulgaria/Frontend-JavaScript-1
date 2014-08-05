@@ -6,8 +6,19 @@ require.config({
   }
 });
 
-require(["jquery", "underscore", "backbone", "user"],
-  function($, _, Backbone, User) {
-  console.log(Backbone);
-  console.log(User);
+require(["jquery", "underscore", "backbone", "user", "counter", "counterdisplay"],
+  function($, _, Backbone, User, Counter, CounterDisplay) {
+    var
+      u = new User(),
+      counterButtons = new Counter({
+        el: "#counterView",
+        model: u
+      }),
+      counterDisplay = new CounterDisplay({
+        el: "#counterViewDisplay",
+        model: u
+      });
+
+    counterButtons.render();
+    counterDisplay.render();
 });
