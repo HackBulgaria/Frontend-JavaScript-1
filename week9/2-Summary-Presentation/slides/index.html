@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Frontend JavaScript Summary - HackBulgaria</title>
+
+		<meta name="description" content="The summary presentation at the end of the Frontend JavaScript course">
+		<meta name="author" content="https://github.com/RadoRado">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="custom-styles/tommorow.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<img src="custom-images/hackbulgaria.png" />
+					<h1>EOC</h1>
+					<h3>End Of Course - A summary of JavaScript!</h3>
+				</section>
+
+				<section>
+					<img src="custom-images/javascript.jpg" alt="" />
+				</section>
+
+				<section>
+					<h2>Weird Shit = Interesting Shit</h2>
+				</section>
+
+				<section>
+					<h2>JavaScript is a programming language.</h2>
+					<h3 style="margin-top: 30px">Backend + Frontend. NodeJS.</h3>
+					<h4><strong>readfile.js</strong></h4>
+				</section>
+
+
+				<section>
+					<h2>Dynamic with Functional Scope</h2>
+					<h3>There is no { block scope. }</h3>
+					<h3>Functions make scope.</h3>
+					<h4><strong>scope.js</strong></h4>
+				</section>
+
+				<section>
+					<h2>Variable Hoisting</h2>
+					<h3>"... declaring a variable anywhere in the code is equivalent to declaring it at the top."</h3>
+					<h4><strong>hoisting.js</strong></h4>
+				</section>
+
+				<section>
+					<h2>1st class functions and Functional Programming</h2>
+					<h3>JavaScript supports Functional paradigms. <strong>This is the natural way of doing things in JS!</strong></h3>
+
+					<h4><strong>logger.js</strong></h4>
+				</section>
+
+				<section>
+					<h2>We code without for-cycle!</h2>
+					<h3>Too verbose. There is a higher-order function for that - [].forEach</h3>
+
+					<h4><strong>foreach.js</strong></h4>
+				</section>
+
+				<section>
+					<h2>One Thread + Event Loop</h2>
+					<img src="custom-images/event-loop.jpg" alt="">
+					<h4><strong>eventloop.js</strong></h4>
+				</section>
+
+				<section>
+					<h2>Shit people say: JavaScript doesn't have *INSERT_SOMETHING*</h2>
+				</section>
+
+				<section>
+					<h2><strong>Standard Library!</strong></h2>
+
+					<h3>Look at Python, for example! JavaScript sux.</h3>
+				</section>
+
+				<section>
+					<h2><a href="http://lodash.com/">lodash.js</a> or <a href="http://underscorejs.org/">underscore.js</a> - your standard library.</h2>
+				</section>
+
+				<section>
+					<h2><strong>DOM API SUX!</strong></h2>
+					<h3>You don't know what is happening. Where is the documentation? WTF?</h3>
+				</section>
+
+				<section>
+					<h2><a href="http://jquery.com/">jQuery</a> or <a href="http://zeptojs.com/">Zepto</a> - Browser independent DOM API.</h2>
+				</section>
+
+				<section>
+					<h2><strong>CALLBACK HELL 1!@!!ONE!</strong></h2>
+					<pre>
+						<code data-trim class="javascript" style="font-size: 24px; margin-top: 50px;">
+asyncStep1(function() {
+    asyncStep2(function() {
+        asyncStep3(function() {
+            // ...
+        });
+    });
+});
+</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2>Promises! They help, I promise!</h2>
+					<h3>Abstraction that provides return value from async functions.</h3>
+					<h4>callbackhell.js, promises.js</h4>
+				</section>
+
+				<section>
+					<h2><strong>
+						You cannot manage dependencies!
+					</strong></h2>
+					<h3>Download them .js files and include them. It's ugly!</h3>
+				</section>
+
+				<section>
+					<h2><strong>You have <a href="http://bower.io/">bower</a> and <a href="https://www.npmjs.org/">npm</a>.</strong></h2>
+					<h3>And they are one of the best out there ;)</h3>
+				</section>
+
+				<section>
+					<h2><strong>You cannot import files!</strong> There are no modules!</h2>
+					<h3>No import, module, require keywords. Only script tags.</h3>
+				</section>
+
+				<section>
+					<h2>You have AMD and CommonJS.</h2>
+					<h3><a href="http://requirejs.org/">RequireJS</a> / <a href="http://browserify.org/">Browserify</a></h3>
+				</section>
+
+				<section>
+					<h2>One step further - <a href="http://backbonejs.org/">BackboneJS</a>, <a href="http://facebook.github.io/react/">React</a>, <a href="https://angularjs.org/">Angular</a></h2>
+					<h3>Model-View-Whatever patterns, just for you!</h3>
+				</section>
+
+				<section>
+					<h2>JavaScript = Tool Based Language</h2>
+					<h3>Bower + RequireJS + undersore + jQuery + BackboneJS </h3>
+				</section>
+
+				<section>
+					<h2>Things that we didn't have time for:</h2>
+					<h3>Testing Frameworks - <a href="http://jasmine.github.io/">Jasmine</a>, <a href="http://karma-runner.github.io/0.12/index.html">Karma</a>, <a href="http://casperjs.org/">CasperJS</a></h3>
+				</section>
+
+
+				<section>
+					<h2>Things that we didn't have time for:</h2>
+					<h3>Automation and Build - <a href="http://gruntjs.com/">Grunt</a> / <a href="http://yeoman.io/">Yeoman</a> / <a href="http://gulpjs.com/">Gulp</a></h3>
+				</section>
+
+				<section>
+					<h2>Things that we didn't have time for:</h2>
+					<h3><a href="http://plugins.jquery.com/">jQuery Plugins</a></h3>
+				</section>
+
+				<section>
+					<h2>Things that we didn't have time for:</h2>
+					<h3><a href="http://www.chromeexperiments.com/webgl/">WebGL & Chrome Experiments</a></a></h3>
+				</section>
+
+				<section>
+					<h2>Things that we didn't have time for:</h2>
+					<h3><a href="https://github.com/lukehoban/es6features">EcmaScript 6 Features - the future!</a></a></h3>
+				</section>
+
+				<section>
+					<h2>Things that we didn't have time for:</h2>
+					<h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">CSS3 stuff!</a></a></h3>
+				</section>
+
+				<section>
+					<h2>Things that we didn't have time for:</h2>
+					<h3><a href="http://coffeescript.org/">CoffeeScript!</a></a></h3>
+				</section>
+
+				<section>
+					<h2>You have a solid JavaScript foundation!</h2>
+					<h3>Build on it - You will learn new things faster.</h3>
+				</section>
+
+				<section>
+					<h2>Refactor State of Mind</h2>
+					<h3>If you see bad JavaScript code, make it better!</h3>
+				</section>
+
+				<section>
+					<h2>Don't Hate!</h2>
+					<h3>Stay open minded & Go code the future!</h3>
+				</section>
+
+				<section>
+					<h2>Thanks for being part of this course ^_^</h2>
+					<img src="custom-images/hackbulgaria.png" />
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: "simple", // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
