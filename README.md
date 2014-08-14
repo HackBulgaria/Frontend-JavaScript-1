@@ -17,13 +17,13 @@ Usually, you will find code samples, links and videos about the topic of the wee
 
 ## Outline of the course
 
-* week0 - Basic JavaScript problems. The idea is go get familiar with the syntax and the language structures
-* week1 - Basic Functional Programming problems to be solved with JavaScript. Making first steps with jQuery.
-* week2 - Introducing JavaScript's OOP and solving OOP problems.
-* week3 - Solving problems with jQuery & What we have learned so far. Starting the World Cup app.
-* week4 - All about jQuery - making components and bigger apps with more interaction and events.
-* week5 - Introducing HTML5 API - Local Storage & Canvas. Making a classic Snake game.
-* week6 - Introducing WebSockets - Making Multiplayer games - Snake, Pong, Paint.
-* week7 - Introducing AMD and RequireJS - Making things with modules
-* week8 - Introducing Promises and MWV pattern. Solving problems with Q and Backbone.
-* week9 - Ending with BackboneJS and closing remarks.
+* __week0__ - Basic JavaScript problems. The idea is go get familiar with the syntax and the language structures
+* __week1__ - Basic Functional Programming problems to be solved with JavaScript. Making first steps with jQuery.
+* __week2__ - Introducing JavaScript's OOP and solving OOP problems.
+* __week3__ - Solving problems with jQuery & What we have learned so far. Starting the World Cup app.
+* __week4__ - All about jQuery - making components and bigger apps with more interaction and events.
+* __week5__ - Introducing HTML5 API - Local Storage & Canvas. Making a classic Snake game.
+* __week6__ - Introducing WebSockets - Making Multiplayer games - Snake, Pong, Paint.
+* __week7__ - Introducing AMD and RequireJS - Making things with modules
+* __week8__ - Introducing Promises and MWV pattern. Solving problems with Q and Backbone.
+* __week9__ - Ending with BackboneJS and closing remarks.
