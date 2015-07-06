@@ -2,6 +2,14 @@
 
 [Be sure to check materials for week 0 first.](https://github.com/HackBulgaria/Frontend-JavaScript-1/blob/master/week0/materials.md)
 
+## Functional JavaScript, Objects an Arrays
+
+To have a good idea about higher order functions & how to use map & filter in JavaScript, cover these two chapters from the book:
+
+* <http://eloquentjavascript.net/03_functions.html>
+* <http://eloquentjavascript.net/04_data.html>
+* <http://eloquentjavascript.net/05_higher_order.html>
+
 ## HTML, CSS and Bootstrap
 
 To avoid headaches from writing custom CSS, we are going to use [Bootstrap](http://getbootstrap.com/).
