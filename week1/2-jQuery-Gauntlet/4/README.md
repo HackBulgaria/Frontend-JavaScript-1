@@ -17,7 +17,7 @@ To run the server, you will have to do the following things:
 
 You will have to make the page to work with the data, fetched from the server.
 
-* First of all, you will have to fetch the data from the server. You can see how we are doing it in the [students system](https://github.com/HackBulgaria/Frontend-JavaScript-1/blob/master/week1/students-system/client/app.js#L6)
+* First of all, you will have to fetch the data from the server. You can see how we are doing it in the [students system](https://github.com/HackBulgaria/Frontend-JavaScript-1/blob/master/week1/3-Students-System/client/app.js#L6)
 * After this, populate the first drop-down menu with the available courses.
 * __The second drop-down menu should contain only the students for the course, selected in the first drop-down.__
 * Below the drop-downs, it should be displayed the name and the GitHub account of the student
